@@ -1,0 +1,3689 @@
+:root {
+  --text:#222;
+  --muted:#6a6a6a;
+  --line:#e5e5e5;
+  --soft:#f7f7f7;
+  --pink:#e91e63;
+  --airbnb:#ff385c
+}
+* {
+  box-sizing:border-box
+}
+html {
+  scroll-behavior:smooth
+}
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  font-size:16px;
+  background:#fff
+}
+button {
+  font:inherit;
+  color:inherit;
+  background:none;
+  border:0;
+  cursor:pointer
+}
+button:disabled {
+  cursor:default;
+  opacity:.35
+}
+a {
+  color:inherit;
+  text-decoration:none
+}
+u {
+  text-underline-offset:2px
+}
+.navbar {
+  height:103px;
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  background:#fff;
+  z-index:50
+}
+.nav-inner {
+  height:100%;
+  max-width:1735px;
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center
+}
+.brand {
+  color:var(--airbnb);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:-1.5px;
+  min-width:250px
+}
+.airbnb-mark {
+  width:31px;
+  height:40px
+}
+.search-pill {
+  height:58px;
+  border:1px solid #ddd;
+  border-radius:999px;
+  box-shadow:0 2px 8px #0001;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding:0 9px 0 28px;
+  min-width:470px
+}
+.search-pill i {
+  height:32px;
+  width:1px;
+  background:#ddd
+}
+.muted {
+  color:#777
+}
+.search-btn {
+  width:43px;
+  height:43px;
+  background:#ff385c;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-left:auto
+}
+.nav-actions {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:300px;
+  justify-content:flex-end;
+  font-weight:600
+}
+.circle {
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:#f6f6f6;
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+.hero-wrap {
+  max-width:1306px;
+  margin:37px auto 57px
+}
+.title-row {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:27px
+}
+.title-row h1 {
+  margin:0;
+  font-size:30px;
+  font-weight:600;
+  letter-spacing:-.6px
+}
+.title-actions {
+  display:flex;
+  gap:21px
+}
+.title-actions button {
+  display:flex;
+  align-items:center;
+  gap:7px;
+  text-decoration:underline
+}
+.title-actions button.saved {
+  color:var(--airbnb);
+  font-weight:700
+}
+.hero-grid {
+  height:577px;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  gap:8px;
+  position:relative
+}
+.hero-img {
+  padding:0;
+  overflow:hidden
+}
+.hero-img img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .25s
+}
+.hero-img:hover img {
+  transform:scale(1.015)
+}
+.hero-0 {
+  grid-row:1/3;
+  border-radius:18px 0 0 18px
+}
+.hero-2 {
+  border-radius:0 18px 0 0
+}
+.hero-4 {
+  border-radius:0 0 18px 0
+}
+.show-photos {
+  position:absolute;
+  right:28px;
+  bottom:25px;
+  background:#fff;
+  border:1px solid #aaa;
+  border-radius:10px;
+  padding:11px 16px;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  font-weight:600
+}
+.section-nav {
+  position:sticky;
+  top:103px;
+  background:#fff;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+  z-index:45
+}
+.section-nav-inner {
+  height:76px;
+  max-width:1306px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+.links {
+  display:flex;
+  gap:29px;
+  height:100%
+}
+.links button {
+  font-weight:600;
+  position:relative
+}
+.links button.active:after {
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:2px;
+  background:#222
+}
+.nav-price {
+  display:flex;
+  align-items:center;
+  gap:20px;
+  font-size:14px
+}
+.nav-price>div {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:2px
+}
+.nav-price button {
+  background:var(--pink);
+  color:white;
+  border-radius:999px;
+  padding:14px 25px;
+  font-weight:700
+}
+.page-grid {
+  max-width:1306px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:760px 434px;
+  gap:112px
+}
+.intro {
+  padding:42px 0 28px;
+  border-bottom:1px solid var(--line)
+}
+.intro h2 {
+  font-size:25px;
+  margin:0 0 8px
+}
+.intro p {
+  margin:0;
+  color:#555
+}
+.favourite {
+  margin-top:30px;
+  border:1px solid #ddd;
+  border-radius:17px;
+  padding:18px 26px;
+  display:grid;
+  grid-template-columns:1fr 110px 110px
+}
+.favourite>div {
+  display:flex;
+  flex-direction:column;
+  gap:4px
+}
+.favourite>div+div {
+  border-left:1px solid #ddd;
+  padding-left:20px;
+  text-align:center
+}
+.favourite span {
+  font-size:14px
+}
+.highlights {
+  padding:25px 0 31px;
+  border-bottom:1px solid var(--line)
+}
+.highlight {
+  display:grid;
+  grid-template-columns:45px 1fr;
+  gap:10px;
+  padding:16px 0
+}
+.highlight h3 {
+  margin:0 0 4px;
+  font-size:17px
+}
+.highlight p {
+  margin:0;
+  color:#666
+}
+.highlight-icon {
+  font-size:26px
+}
+.content-section {
+  padding:39px 0;
+  border-bottom:1px solid var(--line)
+}
+.content-section h2 {
+  font-size:27px;
+  margin:0 0 26px
+}
+.translation {
+  background:var(--soft);
+  padding:19px 22px;
+  border-radius:14px;
+  margin-bottom:18px
+}
+.description p {
+  font-size:17px;
+  line-height:1.55;
+  margin:8px 0
+}
+.description button,.neighborhood button {
+  display:flex;
+  align-items:center;
+  gap:3px;
+  font-weight:600;
+  margin-top:18px
+}
+.sleep-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px
+}
+.sleep-grid>div {
+  display:flex;
+  flex-direction:column;
+  gap:8px
+}
+.sleep-grid img {
+  width:100%;
+  height:242px;
+  object-fit:cover;
+  border-radius:13px
+}
+.sleep-grid span {
+  color:#777
+}
+.amenity-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:27px 50px;
+  margin-bottom:27px
+}
+.amenity {
+  display:flex;
+  align-items:center;
+  gap:15px;
+  font-size:18px
+}
+.amenity span {
+  width:28px;
+  font-size:20px
+}
+.unavailable {
+  color:#777
+}
+.outline-btn {
+  border:1px solid #222;
+  border-radius:10px;
+  padding:14px 18px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:600
+}
+.booking-sticky {
+  position:sticky;
+  top:197px;
+  padding-top:39px
+}
+.discount {
+  border:1px solid #ddd;
+  border-radius:16px;
+  padding:20px 18px;
+  display:grid;
+  grid-template-columns:28px 1fr auto;
+  gap:10px;
+  align-items:center;
+  margin-bottom:27px
+}
+.discount button {
+  background:#f6f6f6;
+  border-radius:10px;
+  padding:11px 14px
+}
+.booking-card {
+  border:1px solid #e0e0e0;
+  border-radius:17px;
+  padding:27px 25px;
+  box-shadow:0 7px 18px #0001;
+  background:#fff
+}
+.booking-price {
+  font-size:18px;
+  margin-bottom:25px
+}
+.booking-price u {
+  font-size:28px;
+  font-weight:600
+}
+.date-box {
+  border:1px solid #bbb;
+  border-radius:11px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  overflow:hidden
+}
+.date-box>div {
+  padding:14px;
+  border-bottom:1px solid #bbb
+}
+.date-box>div+div {
+  border-left:1px solid #bbb
+}
+.date-box b,.guest-row b {
+  font-size:12px;
+  display:block;
+  margin-bottom:8px
+}
+.guest-row {
+  grid-column:1/3;
+  padding:14px;
+  text-align:left;
+  position:relative;
+  width:100%
+}
+.guest-row svg {
+  position:absolute;
+  right:14px;
+  bottom:19px
+}
+.guest-pop {
+  position:absolute;
+  background:#fff;
+  border:1px solid #ddd;
+  box-shadow:0 8px 20px #0002;
+  border-radius:12px;
+  width:250px;
+  padding:11px 16px;
+  right:25px;
+  margin-top:6px;
+  z-index:5
+}
+.guest-pop p {
+  display:flex;
+  justify-content:space-between
+}
+.cancel {
+  background:var(--soft);
+  text-align:center;
+  padding:11px;
+  border-radius:11px;
+  margin:20px 0
+}
+.reserve {
+  width:100%;
+  padding:17px;
+  background:var(--pink);
+  color:white;
+  border-radius:999px;
+  font-weight:700
+}
+.charge {
+  text-align:center;
+  color:#777;
+  margin-top:18px
+}
+.report {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  color:#666;
+  text-decoration:underline;
+  width:100%;
+  margin-top:27px
+}
+.calendar-wrap {
+  padding-top:39px
+}
+.cal-months {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  margin-top:25px
+}
+.month-title {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:19px;
+  margin-bottom:18px
+}
+.week,.days {
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  text-align:center
+}
+.week {
+  font-size:12px;
+  margin-bottom:12px
+}
+.days {
+  gap:6px
+}
+.days span {
+  height:43px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%
+}
+.days .selected {
+  background:#222;
+  color:#fff
+}
+.days .range {
+  background:#f2f2f2;
+  border-radius:0
+}
+.days .muted-day {
+  color:#ccc;
+  text-decoration:line-through
+}
+.calendar-bottom {
+  display:flex;
+  justify-content:space-between;
+  margin-top:24px
+}
+.calendar-icon {
+  border:1px solid #aaa;
+  border-radius:4px;
+  padding:1px 5px
+}
+.rating-hero {
+  padding:24px 0 41px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  justify-items:center;
+  gap:9px
+}
+.rating-hero>b {
+  font-size:107px;
+  font-weight:500;
+  letter-spacing:-6px
+}
+.laurel {
+  font-size:74px;
+  transform:translateY(-5px)
+}
+.laurel-right {
+  transform:scaleX(-1) translateY(-5px)
+}
+.rating-caption {
+  grid-column:1/4;
+  text-align:center;
+  margin-top:-8px
+}
+.rating-caption h3 {
+  font-size:27px;
+  margin:0 0 9px
+}
+.rating-caption p {
+  font-size:18px;
+  line-height:1.3;
+  margin:0 0 13px
+}
+.rating-breakdown {
+  display:grid;
+  grid-template-columns:1.45fr repeat(6,1fr);
+  padding:0 0 25px
+}
+.overall {
+  padding-right:25px
+}
+.overall h3,.rating-metric h3 {
+  font-size:17px;
+  font-weight:500;
+  margin:0 0 17px
+}
+.bar-row {
+  display:grid;
+  grid-template-columns:20px 1fr;
+  gap:9px;
+  align-items:center;
+  font-size:14px;
+  margin:9px 0
+}
+.bar-row>div {
+  height:5px;
+  border-radius:99px;
+  background:#ececec;
+  overflow:hidden
+}
+.bar-row i {
+  display:block;
+  height:100%;
+  background:#222
+}
+.rating-metric {
+  border-left:1px solid var(--line);
+  padding:0 22px
+}
+.rating-metric>b {
+  display:block;
+  font-size:21px;
+  margin-bottom:13px
+}
+.rating-metric span {
+  font-size:30px;
+  line-height:1
+}
+.review-chips {
+  display:flex;
+  gap:12px;
+  overflow:hidden;
+  margin:13px 0 30px
+}
+.review-chips button {
+  white-space:nowrap;
+  border:1px solid #ddd;
+  border-radius:999px;
+  padding:14px 18px;
+  font-size:16px
+}
+.review-cards {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px 70px
+}
+.review-head {
+  display:flex;
+  gap:12px;
+  align-items:center
+}
+.review-head img,.review-avatar {
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#f8eee0;
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+.review-head div:last-child {
+  display:flex;
+  flex-direction:column;
+  gap:3px
+}
+.review-head small {
+  color:#666
+}
+.review-meta {
+  margin:13px 0 12px;
+  font-size:14px
+}
+.review-cards article {
+  min-height:190px
+}
+.review-cards article p {
+  line-height:1.35;
+  margin:0
+}
+.location-name {
+  font-size:20px;
+  margin-top:-10px
+}
+.map {
+  height:570px;
+  background:#eaf0e4;
+  position:relative;
+  overflow:hidden;
+  border-radius:16px;
+  margin:30px 0 24px;
+  background-color:#e9f0e5;
+  background-image:linear-gradient(rgba(170,188,168,.33) 1px,transparent 1px),linear-gradient(90deg,rgba(170,188,168,.33) 1px,transparent 1px),linear-gradient(117deg,transparent 0 39%,#abd3e6 39% 100%);
+  background-size:106px 106px,106px 106px,100% 100%
+}
+.map:after {
+  content:"";
+  position:absolute;
+  width:120%;
+  height:55%;
+  left:-5%;
+  top:0;
+  background:#afd7e9;
+  clip-path:polygon(0 0,43% 0,31% 100%,0 100%);
+  opacity:.95
+}
+.map-search {
+  position:absolute;
+  z-index:3;
+  top:15px;
+  left:15px;
+  width:49px;
+  height:49px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 2px 9px #0002;
+  font-size:30px
+}
+.map-zoom {
+  position:absolute;
+  z-index:3;
+  right:15px;
+  top:15px;
+  display:flex;
+  flex-direction:column;
+  gap:9px
+}
+.map-zoom button {
+  width:49px;
+  height:49px;
+  border-radius:11px;
+  background:#fff;
+  box-shadow:0 2px 9px #0002;
+  font-size:24px
+}
+.map-dot {
+  position:absolute;
+  z-index:2;
+  width:118px;
+  height:118px;
+  border-radius:50%;
+  background:rgba(191,220,173,.62)
+}
+.left-dot {
+  left:34%;
+  top:32%
+}
+.right-dot {
+  left:64%;
+  top:47%
+}
+.map-marker {
+  position:absolute;
+  z-index:4;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:67px;
+  height:67px;
+  border-radius:50%;
+  background:#222;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:40px;
+  box-shadow:0 3px 8px #0004
+}
+.neighborhood {
+  border-top:1px solid var(--line);
+  padding-top:28px;
+  margin-top:20px
+}
+.neighborhood h3 {
+  font-size:22px;
+  margin:0 0 14px
+}
+.neighborhood p {
+  font-size:18px;
+  line-height:1.4
+}
+.host-layout {
+  display:grid;
+  grid-template-columns:430px 1fr;
+  gap:60px
+}
+.host-card {
+  display:grid;
+  grid-template-columns:1fr 120px;
+  gap:12px;
+  padding:38px 28px;
+  border-radius:24px;
+  box-shadow:0 5px 20px #0002;
+  margin-bottom:25px
+}
+.host-card-main {
+  text-align:center;
+  border-right:1px solid var(--line);
+  padding-right:25px
+}
+.host-logo {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin: 0 auto 16px;
+}
+
+.host-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.host-card h3 {
+  font-size:31px;
+  line-height:1.15;
+  margin:0 0 12px
+}
+.host-card-main span {
+  font-size:15px
+}
+.host-stats {
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  justify-content:center
+}
+.host-stats>div {
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  border-bottom:1px solid var(--line);
+  padding-bottom:12px
+}
+.host-stats span {
+  font-size:14px
+}
+.host-left>p {
+  font-size:18px
+}
+.host-right>h3 {
+  font-size:22px;
+  margin:15px 0 20px
+}
+.cohost-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px 28px
+}
+.cohost {
+  display:flex;
+  align-items:center;
+  gap:11px
+}
+.cohost img,.cohost>span {
+  width:43px;
+  height:43px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#e7efff;
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+.host-details {
+  margin-top:31px
+}
+.host-details h3 {
+  font-size:22px
+}
+.host-details p {
+  font-size:17px;
+  margin:7px 0
+}
+.host-details button {
+  margin-top:19px;
+  background:#f4f4f4;
+  border-radius:10px;
+  padding:14px 22px;
+  font-weight:600
+}
+.protection {
+  display:flex;
+  gap:13px;
+  align-items:center;
+  color:#6a6a6a;
+  padding:25px 0
+}
+.protection>div {
+  font-size:24px
+}
+.things-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:66px
+}
+.things-grid>div {
+  padding-right:22px
+}
+.things-icon {
+  font-size:29px;
+  margin-bottom:20px
+}
+.things-grid h3 {
+  font-size:20px;
+  margin:0 0 17px
+}
+.things-grid p {
+  line-height:1.45;
+  margin:7px 0
+}
+.nearby-head {
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+.nearby-head>div {
+  display:flex;
+  align-items:center;
+  gap:12px
+}
+.nearby-head>div>button {
+  width:42px;
+  height:42px;
+  border:1px solid #777;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+.nearby-grid {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:24px;
+  margin-top:28px
+}
+.nearby-grid article img {
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:13px
+}
+.nearby-grid article h3 {
+  font-size:17px;
+  line-height:1.25;
+  margin:10px 0 6px;
+  font-weight:500
+}
+.nearby-grid article p {
+  margin:0
+}
+.nearby-grid article p b {
+  font-weight:500
+}
+.footer {
+  border-top:1px solid var(--line);
+  padding:35px 0 50px;
+  display:flex;
+  justify-content:space-between;
+  color:#666;
+  font-size:14px
+}
+.photo-tour {
+  min-height:100vh
+}
+.tour-top {
+  height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 42px
+}
+.tour-top h2 {
+  font-size:20px
+}
+.tour-top>div {
+  display:flex;
+  gap:12px
+}
+.tour-saved {
+  color:var(--airbnb)
+}
+.tour-inner {
+  max-width:1285px;
+  margin:auto
+}
+.room-tabs {
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  padding:30px 0 56px
+}
+.room-tabs button {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  width:128px;
+  text-align:left
+}
+.room-tabs img {
+  width:128px;
+  height:118px;
+  object-fit:cover;
+  border-radius:10px
+}
+.room-tabs span {
+  color:#666
+}
+.room-section {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  min-height:430px;
+  padding-bottom:90px
+}
+.room-section h1 {
+  font-size:39px;
+  margin:0 0 8px
+}
+.room-section p {
+  font-size:21px;
+  color:#777
+}
+.room-photo {
+  padding:0;
+  width:100%;
+  height:420px;
+  border-radius:14px;
+  overflow:hidden
+}
+.room-photo img {
+  width:100%;
+  height:100%;
+  object-fit:cover
+}
+.room-gallery {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  align-content:start
+}
+.room-gallery.single {
+  display:block
+}
+.room-gallery .room-photo.primary {
+  grid-column:1 / -1;
+  height:420px
+}
+.room-gallery .room-photo.secondary {
+  height:260px
+}
+@media(max-width:900px){
+  .room-gallery{
+    grid-template-columns:1fr
+  }
+  .room-gallery .room-photo.secondary{
+    height:320px
+  }
+}
+.overlay {
+  position:fixed;
+  inset:0;
+  background:#0008;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:100
+}
+.amenities-modal {
+  width:980px;
+  max-height:88vh;
+  background:#fff;
+  border-radius:17px;
+  position:relative;
+  overflow:hidden
+}
+.modal-close {
+  position:absolute;
+  left:27px;
+  top:25px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:2
+}
+.modal-scroll {
+  max-height:88vh;
+  overflow:auto;
+  padding:70px 60px 48px
+}
+.modal-scroll>h2 {
+  font-size:27px;
+  margin:0 0 28px
+}
+.amenity-group {
+  border-bottom:1px solid #eee;
+  margin-bottom:28px;
+  padding-bottom:8px
+}
+.amenity-group h3 {
+  font-size:24px;
+  margin:0 0 8px
+}
+.amenity-row {
+  border-top:1px solid #eee;
+  padding:16px 0;
+  font-size:18px;
+  display:flex;
+  gap:19px;
+  align-items:center
+}
+.amenity-emoji {
+  width:28px;
+  text-align:center
+}
+.lightbox {
+  position:fixed;
+  inset:0;
+  background:#fff;
+  z-index:120;
+  display:grid;
+  grid-template-columns:100px 1fr 100px;
+  grid-template-rows:74px 1fr
+}
+.lb-top {
+  grid-column:1/4;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 25px
+}
+.lb-top>div {
+  display:flex;
+  gap:18px;
+  align-items:center
+}
+.lb-top button {
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+.lb-image {
+  grid-column:2;
+  grid-row:2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 30px 50px
+}
+.lb-image img {
+  max-width:88%;
+  max-height:82vh;
+  object-fit:contain
+}
+.lb-arrow {
+  align-self:center;
+  justify-self:center;
+  width:52px;
+  height:52px;
+  border:1px solid #555;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+.lb-arrow:nth-of-type(2) {
+  grid-column:1;
+  grid-row:2
+}
+.lb-arrow:last-child {
+  grid-column:3;
+  grid-row:2
+}
+.save-toast {
+  position:fixed;
+  z-index:200;
+  left:50%;
+  bottom:27px;
+  transform:translateX(-50%);
+  background:#222;
+  color:#fff;
+  padding:14px 22px;
+  border-radius:10px;
+  box-shadow:0 5px 18px #0004;
+  font-weight:600;
+  animation:toastIn .22s ease-out
+}
+@keyframes toastIn {
+  from {
+    opacity:0;
+    transform:translate(-50%,10px)
+  }
+  to {
+    opacity:1;
+    transform:translate(-50%,0)
+  }
+}
+button:focus-visible {
+  outline:3px solid #222;
+  outline-offset:3px
+}
+@media(max-width:1100px){.nav-inner{padding:0 18px}.brand{min-width:auto}.search-pill{min-width:390px}.page-grid{grid-template-columns:1fr;padding:0 24px}.side-col{display:none}.hero-wrap,.section-nav-inner{padding:0 24px}.hero-grid{height:480px}.section-nav{top:82px}}
+
+/* ===== Final reference-matching layout pass ===== */
+.listing-shell{max-width:1306px;margin:0 auto}
+.top-layout{display:grid;grid-template-columns:minmax(0,760px) 434px;gap:112px;align-items:start}
+.top-main{min-width:0}
+.side-col{min-width:0}
+.booking-side{padding-top:39px}
+.booking-side .discount{margin-bottom:27px}
+.booking-side .booking-sticky{position:sticky;top:151px;padding-top:0}
+.booking-side .report{margin-top:27px}
+.lower-content{width:100%}
+.lower-content>.content-section{width:100%}
+.rating-section{padding-top:34px}
+.rating-hero{padding-top:22px;padding-bottom:48px}
+.laurel-wrap{width:90px;height:120px;display:flex;align-items:center;justify-content:center;color:#262626}
+.laurel-wrap.right{transform:scaleX(-1)}
+.laurel-svg{width:88px;height:116px;filter:drop-shadow(0 7px 5px rgba(0,0,0,.16))}
+.rating-hero>b{font-size:108px;line-height:.9;letter-spacing:-5px;font-weight:500}
+.rating-breakdown{grid-template-columns:1.52fr repeat(6,1fr);padding-bottom:28px}
+.rating-metric{padding:0 22px}
+.rating-metric-icon{display:block;margin-top:2px;height:40px}
+.show-reviews-btn{margin-top:34px;border:1px solid #222;border-radius:10px;padding:14px 18px;font-weight:600;display:flex;align-items:center;gap:7px}
+.location{padding-top:39px}
+.location .map{height:570px}
+.host-section{padding-top:39px}
+.protection{padding:28px 0 38px;max-width:960px;margin:auto}
+.things-section{padding-top:46px}
+.nearby-section{padding-top:40px}
+.nearby-viewport{overflow:hidden;margin-top:28px}
+.nearby-track{display:flex;width:200%;transition:transform .52s cubic-bezier(.2,.7,.2,1);will-change:transform}
+.nearby-page{width:50%;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.nearby-grid{display:none}
+.nearby-page article{min-width:0}
+.nearby-page article img{width:100%;height:260px;object-fit:cover;border-radius:13px;display:block}
+.nearby-page article h3{font-size:17px;line-height:1.25;margin:10px 0 6px;font-weight:500}
+.nearby-page article p{margin:0}
+.nearby-page article p b{font-weight:500}
+.nearby-controls{display:flex;align-items:center;gap:12px}
+.nearby-controls>button{width:42px;height:42px;border:1px solid #777;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.footer{margin-top:0}
+
+/* Strongly match the reference header proportions. */
+.navbar{height:103px}
+.nav-inner{max-width:1640px;padding:0 30px}
+.brand{min-width:250px;font-size:29px}
+.search-pill{min-width:470px;height:58px}
+.hero-wrap{max-width:1306px;margin-top:37px}
+.title-row h1{font-size:30px}
+
+/* The reservation column intentionally ends with the calendar.
+   The lower half is full-width, matching the recording. */
+.top-layout + .lower-content .content-section{box-sizing:border-box}
+
+@media(max-width:1200px){
+  .listing-shell{padding:0 24px}
+  .top-layout{grid-template-columns:minmax(0,1fr) 390px;gap:48px}
+  .nearby-page{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .nearby-track{width:200%}
+}
+@media(max-width:900px){
+  .top-layout{grid-template-columns:1fr}
+  .side-col{display:none}
+  .nearby-page{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ===== Reference behavior pass: header + reservation lifecycle + carousel ===== */
+.navbar{position:relative;top:auto}
+.section-nav{top:0}
+.section-nav-inner{height:78px}
+.listing-shell{max-width:1306px;margin:0 auto}
+.top-layout{grid-template-columns:760px 434px;gap:112px;align-items:stretch}
+.top-main{min-width:0}
+.side-col{min-width:0;height:100%}
+.booking-side{height:100%;padding-top:39px;display:flex;flex-direction:column}
+.booking-side .discount{margin-bottom:27px}
+.booking-holder{flex:1;min-height:0;position:relative}
+.booking-sticky{position:sticky;top:101px;padding-top:0}
+.booking-side .report{margin-top:27px}
+.lower-content{width:100%}
+.lower-content>.content-section{width:100%}
+/* the reservation sidebar terminates exactly with the calendar region */
+.top-layout{overflow:visible}
+.rating-section{padding-top:34px}
+.nearby-viewport{overflow:hidden;margin-top:28px}
+.nearby-track{display:flex;gap:24px;width:max-content;transition:transform .52s cubic-bezier(.2,.7,.2,1);will-change:transform}
+.nearby-track article{width:260px;min-width:260px}
+.nearby-track article img{width:260px;height:260px;object-fit:cover;border-radius:13px;display:block}
+.nearby-track article h3{font-size:17px;line-height:1.25;margin:10px 0 6px;font-weight:500}
+.nearby-track article p{margin:0}
+.nearby-page{display:contents}
+@media(max-width:1200px){
+  .top-layout{grid-template-columns:minmax(0,1fr) 390px;gap:48px}
+  .booking-holder{flex:1;min-height:0}
+}
+@media(max-width:900px){
+  .top-layout{grid-template-columns:1fr}
+  .side-col{display:none}
+}
+
+/* ===== Pixel pass 2026-09-17: match recorded scroll behavior ===== */
+/* The large Airbnb navbar scrolls away. The compact section nav becomes the only sticky bar. */
+.navbar{position:relative;top:auto}
+.section-nav{position:sticky;top:0;z-index:60}
+.section-nav-inner{height:78px}
+
+/* Sidebar owns the full two-column region; only the booking card/report stick.
+   This lets the reservation disappear exactly when the calendar region ends. */
+.top-layout{align-items:stretch}
+.side-col{height:auto;align-self:stretch}
+.booking-side{height:100%;display:flex;flex-direction:column;padding-top:39px}
+.booking-holder{flex:1;min-height:0;position:relative}
+.booking-sticky{position:sticky;top:90px;padding-top:0}
+
+/* Reference carousel: five compact cards with a smooth page-length slide. */
+.nearby-viewport{overflow:hidden;margin-top:28px}
+.nearby-track{display:flex;gap:24px;width:max-content;transition:transform .58s cubic-bezier(.22,.61,.36,1);will-change:transform}
+.nearby-track article{flex:0 0 243px;width:243px;min-width:243px}
+.nearby-track article img{width:243px;height:260px;display:block;object-fit:cover;border-radius:13px}
+.nearby-track article h3{font-size:17px;line-height:1.25;margin:10px 0 6px;font-weight:500}
+.nearby-track article p{margin:0;font-size:16px}
+.nearby-track article p b{font-weight:500}
+.nearby-page{display:contents}
+.nearby-controls>button{transition:background .18s ease,transform .18s ease}
+.nearby-controls>button:not(:disabled):hover{background:#f5f5f5;transform:scale(1.03)}
+
+@media(max-width:1200px){
+  .top-layout{grid-template-columns:minmax(0,1fr) 390px;gap:48px}
+  .nearby-track article{flex-basis:230px;width:230px}
+  .nearby-track article img{width:230px}
+}
+
+/* ===== Final typography + content parity pass ===== */
+body{font-family:Arial,Helvetica,sans-serif;color:#222;font-size:16px;-webkit-font-smoothing:antialiased}
+.description{padding-top:30px;padding-bottom:32px}
+.description p{font-size:17px;line-height:1.55;margin:0 0 6px}
+.description .translation{font-size:16px;margin-bottom:14px}
+.inline-link{font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.description-toggle{display:inline-flex;align-items:center;gap:5px;font-size:16px;font-weight:600;margin-top:9px;padding:0}
+.description-extra{margin-top:2px!important}
+.amenity-grid{gap:27px 50px}
+.amenity{font-size:18px;line-height:1.25}
+.amenity-icon{width:31px;min-width:31px;display:flex;align-items:center;justify-content:center}
+.amenity-icon svg{stroke-width:1.65}
+.outline-btn{font-size:16px;font-weight:600;padding:14px 17px}
+.review-cards article{min-height:150px}
+.review-cards article p{font-size:17px;line-height:1.4}
+.review-show-more{display:block;font-size:16px;font-weight:600;text-decoration:underline;margin-top:7px;padding:0}
+.review-meta{font-size:14px;font-weight:500}
+.show-reviews-btn{font-size:16px;font-weight:600;background:#fff}
+.rating-caption h3{font-size:26px;font-weight:500}
+.rating-caption p{font-size:17px}
+.rating-metric h3,.overall h3{font-size:16px;font-weight:500}
+.rating-metric>b{font-size:20px;font-weight:500}
+.location h2,.things-section h2,.nearby-section h2{font-size:28px;font-weight:500}
+.nearby-track article h3{font-weight:500}
+.amenities-modal{font-family:Arial,Helvetica,sans-serif}
+.amenities-modal h2{font-size:25px;font-weight:500}
+.amenity-group h3{font-size:24px;font-weight:500}
+.amenity-row{font-size:18px}
+.amenity-svg{width:36px;min-width:36px;display:flex;align-items:center;justify-content:flex-start}
+.amenity-svg svg{stroke-width:1.7}
+
+/* Description parity: reference starts collapsed and reveals the full copy with Show less. */
+.description-body{overflow:hidden;transition:max-height .28s ease}
+.description-body.collapsed{max-height:112px}
+.description-body.expanded{max-height:420px}
+.description-body p{margin:0 0 5px;font-size:17px;line-height:1.55}
+.description-toggle{font-weight:600;text-decoration-thickness:1px;text-underline-offset:3px}
+.review-cards{grid-template-columns:1fr 1fr;column-gap:70px;row-gap:52px}
+.review-cards article{min-height:170px}
+.review-head b{font-size:16px;font-weight:600}
+.review-head small{font-size:14px}
+.amenity-row{min-height:54px;border-bottom:1px solid #ebebeb;display:flex;align-items:center;gap:18px}
+
+/* ================================================================
+   Final pixel-spacing pass from the 17 Sep reference recording.
+   Desktop reference viewport: 1918 x 924.
+   ================================================================ */
+
+/* Reference typography and neutral spacing. */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.35;
+  color: #222;
+}
+
+.navbar {
+  position: relative;
+  top: auto;
+  height: 103px;
+}
+
+.section-nav {
+  position: sticky;
+  top: 0;
+  height: 77px;
+}
+
+.section-nav-inner {
+  height: 77px;
+  max-width: 1306px;
+}
+
+.hero-wrap,
+.listing-shell {
+  max-width: 1306px;
+}
+
+/* The recorded top layout is 760 + 112 + 434 = 1306px. */
+.top-layout {
+  display: grid;
+  grid-template-columns: 760px 434px;
+  gap: 112px;
+  align-items: start;
+  overflow: visible;
+}
+
+.top-main {
+  min-width: 0;
+}
+
+.side-col {
+  min-width: 0;
+  align-self: start;
+}
+
+/* Critical behavior: the whole right rail sticks below the section nav,
+   then naturally leaves the viewport when the top-layout ends at the
+   calendar. This reproduces the recorded reservation lifecycle. */
+.booking-side {
+  position: sticky;
+  top: 77px;
+  padding-top: 39px;
+  height: max-content;
+}
+
+.booking-holder {
+  display: contents;
+}
+
+.booking-sticky {
+  position: static;
+  padding-top: 0;
+}
+
+.booking-side .discount {
+  margin-bottom: 27px;
+}
+
+.booking-side .report {
+  margin-top: 27px;
+}
+
+/* Description block in the recording. */
+.intro {
+  padding-top: 42px;
+  padding-bottom: 28px;
+}
+
+.highlights {
+  padding-top: 25px;
+  padding-bottom: 31px;
+}
+
+.highlight {
+  padding: 16px 0;
+}
+
+.description {
+  padding-top: 30px;
+  padding-bottom: 32px;
+}
+
+.translation {
+  padding: 19px 22px;
+  margin-bottom: 13px;
+}
+
+.description-body.collapsed {
+  max-height: 112px;
+}
+
+.description-body.expanded {
+  max-height: 240px;
+}
+
+.description-body p {
+  font-size: 17px;
+  line-height: 1.55;
+  margin: 0 0 4px;
+}
+
+.description-toggle {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+/* Sleeping section: heading-to-photo spacing is compact in the reference. */
+.sleep-grid {
+  gap: 20px;
+}
+
+.sleep-grid img {
+  height: 242px;
+}
+
+/* Amenities + calendar follow directly after the sleeping section. */
+.amenities-preview {
+  padding-top: 39px;
+  padding-bottom: 36px;
+}
+
+.amenity-grid {
+  gap: 27px 50px;
+  margin-bottom: 28px;
+}
+
+.amenity {
+  font-size: 18px;
+}
+
+.calendar-wrap {
+  padding-top: 39px;
+  padding-bottom: 41px;
+}
+
+.cal-months {
+  gap: 35px;
+  margin-top: 25px;
+}
+
+.calendar-bottom {
+  margin-top: 24px;
+}
+
+/* Ratings: larger breathing room above the 4.95 hero, as in the recording. */
+.rating-section {
+  padding-top: 59px;
+  padding-bottom: 38px;
+}
+
+.rating-hero {
+  padding-top: 16px;
+  padding-bottom: 47px;
+}
+
+.rating-hero > b {
+  font-size: 108px;
+  line-height: 0.9;
+  font-weight: 500;
+  letter-spacing: -5px;
+}
+
+.rating-caption {
+  margin-top: -8px;
+}
+
+.rating-caption h3 {
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.rating-caption p {
+  font-size: 17px;
+  line-height: 1.35;
+  margin-bottom: 14px;
+}
+
+.rating-breakdown {
+  grid-template-columns: 1.45fr repeat(6, 1fr);
+  padding-bottom: 28px;
+}
+
+.review-chips {
+  gap: 12px;
+  margin: 13px 0 30px;
+}
+
+.review-chips button {
+  padding: 14px 18px;
+}
+
+.review-cards {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 70px;
+  row-gap: 49px;
+}
+
+.review-cards article {
+  min-height: 176px;
+}
+
+.review-head img,
+.review-avatar {
+  width: 48px;
+  height: 48px;
+}
+
+.review-meta {
+  margin: 13px 0 12px;
+}
+
+.show-reviews-btn {
+  margin-top: 34px;
+}
+
+/* Location and lower sections stay centered at the same 1306px width. */
+.location {
+  padding-top: 40px;
+  padding-bottom: 37px;
+}
+
+.location .map {
+  height: 570px;
+  margin: 30px 0 24px;
+}
+
+.neighborhood {
+  margin-top: 20px;
+}
+
+.host-section {
+  padding-top: 39px;
+  padding-bottom: 38px;
+}
+
+.protection {
+  max-width: none;
+  padding: 26px 0 35px;
+}
+
+.things-section {
+  padding-top: 45px;
+  padding-bottom: 50px;
+}
+
+.things-grid {
+  gap: 65px;
+}
+
+.nearby-section {
+  padding-top: 39px;
+  padding-bottom: 55px;
+}
+
+/* Exact five-card geometry visible in the reference: 244px cards,
+   22px gaps, 1330px page-step. */
+.nearby-viewport {
+  margin-top: 28px;
+  overflow: hidden;
+}
+
+.nearby-track {
+  display: flex;
+  gap: 22px;
+  width: max-content;
+  transition: transform 0.52s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+}
+
+.nearby-track article {
+  flex: 0 0 244px;
+  width: 244px;
+  min-width: 244px;
+}
+
+.nearby-track article img {
+  width: 244px;
+  height: 244px;
+  object-fit: cover;
+  border-radius: 13px;
+}
+
+.nearby-track article h3 {
+  font-size: 17px;
+  line-height: 1.25;
+  margin: 10px 0 6px;
+  font-weight: 500;
+}
+
+.nearby-track article p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.nearby-head > div {
+  gap: 12px;
+}
+
+.nearby-head > div > button {
+  width: 42px;
+  height: 42px;
+}
+
+.footer {
+  padding: 35px 0 50px;
+}
+
+/* Modal geometry from the recording. */
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.amenities-modal {
+  width: 976px;
+  max-height: 88vh;
+  border-radius: 17px;
+}
+
+.modal-scroll {
+  max-height: 88vh;
+  padding: 70px 60px 48px;
+}
+
+.modal-scroll > h2 {
+  font-size: 27px;
+  margin-bottom: 28px;
+}
+
+.amenity-group {
+  margin-bottom: 28px;
+  padding-bottom: 8px;
+}
+
+.amenity-group h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.amenity-row {
+  min-height: 54px;
+  padding: 16px 0;
+  gap: 18px;
+  font-size: 18px;
+}
+
+/* Full codebase readability: avoid compressed, single-line source blocks. */
+
+/* Reservation behavior restored to the last known-good build. The sidebar
+   spans the upper two-column region; only the booking card/report wrapper
+   sticks, and it is constrained by the calendar row height. */
+.top-layout {
+  display: grid;
+  grid-template-columns: 760px 434px;
+  gap: 112px;
+  align-items: stretch;
+  overflow: visible;
+}
+
+.side-col {
+  min-width: 0;
+  height: 100%;
+  align-self: stretch;
+}
+
+.booking-side {
+  height: 100%;
+  padding-top: 39px;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-side .discount {
+  margin-bottom: 27px;
+}
+
+.booking-holder {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+.booking-sticky {
+  position: sticky;
+  top: 90px;
+  padding-top: 0;
+}
+
+.booking-side .report {
+  margin-top: 27px;
+}
+
+.nearby-track {
+  gap: 24px;
+}
+
+/* ============================================================================
+   FINAL DESKTOP WIDTH CORRECTION — reference recording at 1918px capture
+   The reference content canvas renders at 1400 physical px in the recording.
+   The browser capture uses 125% system scaling, so the corresponding CSS
+   canvas is 1120px. Keep the reservation implementation above unchanged.
+   ============================================================================ */
+
+.listing-shell,
+.hero-wrap,
+.section-nav-inner {
+  width: 1120px;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-layout {
+  display: grid;
+  grid-template-columns: 660px 380px;
+  column-gap: 80px;
+  row-gap: 0;
+  align-items: stretch;
+}
+
+.page-grid {
+  max-width: 1120px;
+  grid-template-columns: 660px 380px;
+  column-gap: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1167px) and (min-width: 901px) {
+  /* Keep the exact desktop reference proportions when the recording viewport
+     is narrower. Do not switch to a different 1fr/390px layout: that changes
+     the left/right rhythm and makes the reservation rail sit too close. */
+  .listing-shell,
+  .hero-wrap,
+  .section-nav-inner {
+    width: 85.85vw;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .top-layout {
+    grid-template-columns: 50% 28.49%;
+    column-gap: 7.35%;
+  }
+
+  .page-grid {
+    grid-template-columns: 50% 28.49%;
+    column-gap: 7.35%;
+  }
+}
+
+@media (max-width: 900px) {
+  .top-layout,
+  .page-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== V2 reference parity: Save state + description reveal + amenity availability ===== */
+.title-actions button.saved svg {
+  fill: currentColor;
+}
+
+.save-toast {
+  bottom: 28px;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.description-body {
+  position: relative;
+}
+
+.description-body.collapsed::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 34px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), #fff 88%);
+}
+
+.description-body.expanded::after {
+  display: none;
+}
+
+.amenity-row.unavailable {
+  color: #707070;
+}
+
+.amenity-row.unavailable svg {
+  color: #707070;
+}
+
+.amenity-row.unavailable s {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+/* ===== V2.1 reference correction pass ===== */
+body,
+button,
+input,
+textarea,
+select {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+/* Secondary navigation is removed from layout until the complete hero
+   has left the viewport. This prevents a blank 77px/hero-gap while hidden. */
+.section-nav.is-hidden {
+  display: none;
+}
+
+.section-nav.is-visible {
+  display: block;
+}
+
+/* Reference header wordmark */
+.brand {
+  color: #ff385c;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1.4px;
+}
+
+.airbnb-mark {
+  width: 32px;
+  height: 38px;
+}
+
+/* Host summary directly below the Guest favourite card. */
+.host-summary {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 0 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.host-summary-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.host-summary-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.host-summary > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.host-summary b {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.host-summary span {
+  color: #6a6a6a;
+  font-size: 16px;
+}
+
+/* Highlight icons match the reference line-icon treatment rather than
+   emoji glyphs, whose platform-specific rendering changes the appearance. */
+.highlight-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #222;
+}
+
+.highlight-icon svg {
+  stroke-width: 1.55;
+}
+
+.highlight h3 {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.highlight p {
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+/* Description: keep the translation notice on one line at the reference
+   desktop width and match the reference's regular body weight. */
+.translation {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  min-height: 64px;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.translation .inline-link {
+  display: inline;
+  margin: 0 0 0 4px;
+  padding: 0;
+  font-size: inherit;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.description-body p {
+  font-size: 17px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.description-toggle {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Main listing typography: use explicit weights instead of browser defaults. */
+.intro h2 {
+  font-size: 25px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.intro p {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.favourite b {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.favourite span {
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.favourite > div:nth-child(2) b,
+.favourite > div:nth-child(3) b {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.favourite > div:nth-child(2) span,
+.favourite > div:nth-child(3) span {
+  font-size: 15px;
+}
+
+.content-section h2 {
+  font-weight: 500;
+}
+
+/* Amenities/modal typography is deliberately lighter than the previous build. */
+.amenities-preview h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.amenity {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.outline-btn {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.amenities-modal {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-scroll > h2 {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.amenity-group h3 {
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.amenity-row {
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.amenity-row s {
+  font-weight: 400;
+}
+
+/* Booking card reference weights */
+.booking-price {
+  font-weight: 400;
+}
+
+.booking-price u {
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.booking-price span {
+  font-size: 18px;
+}
+
+.date-box b {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.date-box span,
+.guest-row span {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.reserve {
+  font-weight: 700;
+}
+
+.charge,
+.cancel {
+  font-weight: 400;
+}
+
+
+.discount-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6a9d36;
+}
+
+.amenity-group h3 {
+  font-weight: 500;
+}
+
+.amenity-row {
+  font-weight: 400;
+}
+
+.amenity-row.unavailable {
+  color: #6f6f6f;
+}
+
+.nav-price b {
+  font-weight: 600;
+}
+
+.nav-price span {
+  font-weight: 400;
+}
+
+/* Global reference weight normalization. Browser default headings are 700,
+   while the reference uses a lighter Cereal-like hierarchy. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+.section-nav .links button {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.booking-card h3,
+.booking-card b {
+  font-weight: 600;
+}
+
+.host-section h2,
+.host-section h3,
+.location h2,
+.things-section h2,
+.nearby-section h2 {
+  font-weight: 500;
+}
+
+
+/* ===== V2.2 spacing + scroll-behaviour correction ===== */
+.section-nav.is-hidden {
+  display: none;
+}
+
+/* Once the hero is completely gone, the compact nav overlays the page at
+   the viewport top. It does not push the listing content downward. */
+.section-nav.is-visible {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 60;
+}
+
+/* Short gallery-to-listing gap from the reference recording. */
+.hero-wrap {
+  margin-bottom: 28px;
+}
+
+/* Tighter listing intro spacing. */
+.intro {
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+
+/* Compact calendar geometry from the reference. */
+.calendar-wrap {
+  padding-top: 24px;
+  padding-bottom: 18px;
+}
+
+.calendar-wrap h2 {
+  font-size: 25px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.calendar-wrap .subtle {
+  margin: 0;
+  font-size: 16px;
+}
+
+.cal-months {
+  gap: 28px;
+  margin-top: 15px;
+}
+
+.month-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.week {
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.days {
+  gap: 2px;
+}
+
+.days span {
+  height: 34px;
+  font-size: 16px;
+}
+
+.calendar-bottom {
+  margin-top: 12px;
+}
+
+/* ============================================================================
+   FINAL REFERENCE MATCH — 2026-09-26
+   Source: current build recording compared against the supplied reference.
+   Keep this block last so the earlier iterative passes cannot override it.
+   ============================================================================ */
+
+/* The reference listing starts directly with the property page; there is no
+   large Airbnb search header in the supplied desktop recording. */
+.navbar {
+  display: none !important;
+}
+
+/* Compact section navigation: overlay only, never reserve page space. */
+.section-nav.is-hidden {
+  display: none !important;
+}
+
+.section-nav.is-visible {
+  display: block;
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 66px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.98);
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #dddddd;
+}
+
+.section-nav-inner {
+  width: 1120px;
+  max-width: 1120px;
+  height: 66px;
+  margin: 0 auto;
+}
+
+.section-nav .links {
+  height: 66px;
+  gap: 28px;
+}
+
+.section-nav .links button {
+  height: 66px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.section-nav .nav-price {
+  gap: 18px;
+}
+
+.section-nav .nav-price b {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.section-nav .nav-price span {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.section-nav .nav-price > button {
+  min-width: 67px;
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 20px;
+  background: #dd0062;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Hero geometry and typography. */
+.hero-wrap {
+  width: 1120px;
+  max-width: 1120px;
+  margin: 34px auto 46px;
+}
+
+.title-row {
+  margin-bottom: 18px;
+}
+
+.title-row h1 {
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: -0.25px;
+}
+
+.title-actions {
+  gap: 18px;
+}
+
+.title-actions button {
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hero-grid {
+  height: 531px;
+}
+
+.show-photos {
+  right: 18px;
+  bottom: 18px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Main two-column proportions match the recording. */
+.listing-shell {
+  width: 1120px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.top-layout {
+  grid-template-columns: 660px 380px;
+  column-gap: 80px;
+}
+
+/* Listing intro. */
+.intro {
+  padding-top: 0;
+  padding-bottom: 18px;
+}
+
+.intro h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+}
+
+.intro p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+/* Guest favourite: compact, with the same two decorative laurel marks as the
+   reference rather than an emoji glyph. */
+.favourite {
+  min-height: 53px;
+  margin-top: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 72px 70px;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.favourite-copy {
+  min-width: 0;
+  padding: 8px 13px 7px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.favourite-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1;
+}
+
+.favourite-title .laurel-svg {
+  width: 11px;
+  height: 22px;
+  color: #222;
+  flex: 0 0 11px;
+}
+
+.favourite-title .laurel-svg:first-child {
+  transform: scaleX(-1);
+}
+
+.favourite-title b {
+  font-size: 12px;
+  line-height: 1.05;
+  font-weight: 600;
+}
+
+.favourite-copy > span {
+  display: block;
+  margin-top: 3px;
+  max-width: 290px;
+  font-size: 11px;
+  line-height: 1.18;
+  font-weight: 400;
+}
+
+.favourite > div:nth-child(2),
+.favourite > div:nth-child(3) {
+  border-left: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.favourite > div:nth-child(2) b,
+.favourite > div:nth-child(3) b {
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.favourite > div:nth-child(2) span {
+  margin-top: 2px;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.favourite > div:nth-child(3) span {
+  margin-top: 3px;
+  font-size: 10px;
+}
+
+/* Host summary: compact and keep the logo text inside the circle. */
+.host-summary {
+  gap: 12px;
+  padding: 16px 0 20px;
+}
+
+.host-summary-avatar {
+  width: 36px;
+  height: 36px;
+  flex-basis: 36px;
+  overflow: hidden;
+  font-size: 5px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.host-summary > div:last-child {
+  gap: 2px;
+}
+
+.host-summary b {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.host-summary span {
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+/* Highlights. */
+.highlights {
+  padding: 14px 0 18px;
+  gap: 18px;
+}
+
+.highlight {
+  gap: 13px;
+}
+
+.highlight-icon {
+  width: 22px;
+  height: 26px;
+  flex: 0 0 22px;
+}
+
+.highlight-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.4;
+}
+
+.highlight h3 {
+  margin: 0 0 2px;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.highlight p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.25;
+  color: #6a6a6a;
+  font-weight: 400;
+}
+
+/* Description/translation. */
+.description {
+  padding-top: 18px;
+  padding-bottom: 22px;
+}
+
+.translation {
+  min-height: 38px;
+  padding: 0 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background: #f7f7f7;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.translation .inline-link,
+.description-toggle {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.description-body p {
+  margin: 0 0 4px;
+  font-size: 11px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+/* Booking card: tighter reference typography. */
+.booking-side {
+  padding-top: 28px;
+}
+
+.booking-side .discount {
+  margin-bottom: 18px;
+}
+
+.booking-card {
+  border-radius: 12px;
+  padding: 20px 18px 14px;
+}
+
+.booking-price {
+  gap: 4px;
+}
+
+.booking-price u {
+  font-size: 21px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.booking-price span {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.date-box b {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.date-box span,
+.guest-row span {
+  font-size: 12px;
+}
+
+.reserve {
+  height: 36px;
+  font-size: 12px;
+}
+
+.charge,
+.cancel {
+  font-size: 10px;
+}
+
+/* Calendar — substantially tighter than the previous build. */
+.calendar-wrap {
+  padding-top: 20px;
+  padding-bottom: 14px;
+}
+
+.calendar-wrap h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.calendar-wrap .subtle {
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.cal-months {
+  gap: 28px;
+  margin-top: 12px;
+}
+
+.month-title {
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.month-title button {
+  width: 24px;
+  height: 24px;
+}
+
+.week {
+  margin-bottom: 2px;
+  font-size: 10px;
+}
+
+.days {
+  gap: 0;
+}
+
+.days span {
+  height: 30px;
+  font-size: 13px;
+}
+
+.calendar-bottom {
+  margin-top: 6px;
+}
+
+/* Lower page hierarchy. */
+.content-section h2,
+.host-section h2,
+.location h2,
+.things-section h2,
+.nearby-section h2 {
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.sleep-grid img {
+  border-radius: 8px;
+}
+
+/* Nearby cards match the smaller reference card geometry. */
+.nearby-section {
+  padding-top: 28px;
+}
+
+.nearby-viewport {
+  margin-top: 20px;
+}
+
+.nearby-track {
+  gap: 20px;
+}
+
+.nearby-track article {
+  flex: 0 0 220px;
+  width: 220px;
+  min-width: 220px;
+}
+
+.nearby-track article img {
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+}
+
+.nearby-track article h3 {
+  margin: 8px 0 4px;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.nearby-track article p {
+  font-size: 11px;
+  line-height: 1.25;
+}
+
+.nearby-controls > button {
+  width: 36px;
+  height: 36px;
+}
+
+/* The footer is intentionally absent from the listing. */
+.footer {
+  display: none !important;
+}
+
+/* ========================================================================
+   FINAL REFERENCE REBUILD — 2026-09-26
+   Target: supplied reference recording at 1918x1078 capture size.
+   This block intentionally supersedes the earlier experimental V2 passes.
+   ======================================================================== */
+
+/* Airbnb's main header is part of the reference. It scrolls away naturally. */
+.navbar {
+  display: block !important;
+  position: relative;
+  top: auto;
+  height: 89px;
+  border-bottom: 1px solid #eeeeee;
+  background: #fff;
+  z-index: 50;
+}
+
+.nav-inner {
+  max-width: 1735px;
+  height: 89px;
+  padding: 0 20px;
+}
+
+.brand {
+  min-width: 250px;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1.4px;
+}
+
+.airbnb-mark {
+  width: 32px;
+  height: 38px;
+}
+
+.search-pill {
+  min-width: 435px;
+  height: 52px;
+  padding-left: 25px;
+  gap: 16px;
+  font-size: 15px;
+}
+
+.search-btn {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-actions {
+  min-width: 300px;
+  font-size: 15px;
+}
+
+.circle {
+  width: 44px;
+  height: 44px;
+}
+
+/* Hero: reference is approximately 495 CSS px tall at this capture scale. */
+.hero-wrap {
+  width: 1306px;
+  max-width: 1306px;
+  margin: 34px auto 46px;
+}
+
+.title-row {
+  margin-bottom: 18px;
+}
+
+.title-row h1 {
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.35px;
+}
+
+.title-actions {
+  gap: 20px;
+}
+
+.title-actions button {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.hero-grid {
+  height: 495px;
+}
+
+.show-photos {
+  right: 28px;
+  bottom: 25px;
+  padding: 11px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+/* Compact nav overlays the page after the hero, exactly as in the recording. */
+.section-nav.is-hidden {
+  display: none !important;
+}
+
+.section-nav.is-visible {
+  display: block;
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 66px;
+  background: rgba(255,255,255,.98);
+  border-top: 0;
+  border-bottom: 1px solid #dddddd;
+  z-index: 100;
+}
+
+.section-nav-inner {
+  width: 1306px;
+  max-width: 1306px;
+  height: 66px;
+}
+
+.section-nav .links {
+  height: 66px;
+  gap: 28px;
+}
+
+.section-nav .links button {
+  height: 66px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.section-nav .nav-price {
+  gap: 20px;
+  font-size: 14px;
+}
+
+.section-nav .nav-price b {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.section-nav .nav-price span {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.section-nav .nav-price > button {
+  min-width: 94px;
+  height: 42px;
+  padding: 0 21px;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* The reference's two columns are about 653 / 96 / 372 CSS px. */
+.listing-shell {
+  width: 1306px;
+  max-width: 1306px;
+  margin: 0 auto;
+}
+
+.top-layout {
+  grid-template-columns: 653px 372px;
+  gap: 96px;
+  align-items: start;
+}
+
+/* Listing intro */
+.intro {
+  padding: 0 0 23px;
+}
+
+.intro h2 {
+  margin: 0 0 7px;
+  font-size: 25px;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -.2px;
+}
+
+.intro p {
+  font-size: 16px;
+  line-height: 1.35;
+  color: #484848;
+}
+
+/* Guest favourite is a compact horizontal card, not the previous tiny version. */
+.favourite {
+  height: 80px;
+  min-height: 80px;
+  margin-top: 22px;
+  padding: 0;
+  border-radius: 16px;
+  grid-template-columns: 1fr 88px 86px;
+  overflow: hidden;
+}
+
+.favourite-copy {
+  padding: 10px 18px;
+  justify-content: center;
+}
+
+.favourite-title {
+  gap: 7px;
+}
+
+.favourite-title .laurel-svg {
+  width: 17px;
+  height: 28px;
+}
+
+.favourite-title b {
+  font-size: 16px;
+  line-height: 1.05;
+  font-weight: 600;
+}
+
+.favourite-copy > span {
+  max-width: 390px;
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.favourite > div:nth-child(2),
+.favourite > div:nth-child(3) {
+  padding: 0 10px;
+}
+
+.favourite > div:nth-child(2) b,
+.favourite > div:nth-child(3) b {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.favourite > div:nth-child(2) span {
+  margin-top: 4px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.favourite > div:nth-child(3) span {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+/* Host summary */
+.host-summary {
+  gap: 16px;
+  padding: 22px 0 25px;
+}
+
+.host-summary-avatar {
+  width: 48px;
+  height: 48px;
+  flex-basis: 48px;
+  font-size: 6px;
+}
+
+.host-summary b {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.host-summary span {
+  font-size: 15px;
+}
+
+/* Highlights */
+.highlights {
+  padding: 22px 0 26px;
+}
+
+.highlight {
+  grid-template-columns: 39px 1fr;
+  gap: 12px;
+  padding: 13px 0;
+}
+
+.highlight-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.highlight-icon svg {
+  width: 25px;
+  height: 25px;
+  stroke-width: 1.5;
+}
+
+.highlight h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.highlight p {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* Translation + description */
+.description {
+  padding: 25px 0 30px;
+}
+
+.translation {
+  min-height: 52px;
+  padding: 0 18px;
+  margin-bottom: 15px;
+  border-radius: 13px;
+  font-size: 15px;
+}
+
+.translation .inline-link,
+.description-toggle {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.description-body p {
+  margin: 0 0 5px;
+  font-size: 16px;
+  line-height: 1.48;
+}
+
+.description-toggle {
+  margin-top: 12px;
+}
+
+/* Sleep / amenities */
+.content-section h2,
+.host-section h2,
+.location h2,
+.things-section h2,
+.nearby-section h2 {
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.sleep-grid img {
+  height: 242px;
+  border-radius: 13px;
+}
+
+.sleep-grid b,
+.sleep-grid span {
+  font-size: 15px;
+}
+
+.amenity-grid {
+  gap: 22px 50px;
+  margin-bottom: 27px;
+}
+
+.amenity {
+  gap: 15px;
+  font-size: 16px;
+}
+
+.amenity-icon {
+  width: 28px;
+  min-width: 28px;
+}
+
+.outline-btn {
+  padding: 14px 18px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Booking rail */
+.booking-side {
+  padding-top: 38px;
+}
+
+.booking-side .discount {
+  margin-bottom: 27px;
+}
+
+.discount {
+  min-height: 76px;
+  padding: 17px 16px;
+  border-radius: 16px;
+  font-size: 15px;
+}
+
+.discount button {
+  padding: 11px 14px;
+  font-size: 15px;
+}
+
+.booking-card {
+  border-radius: 17px;
+  padding: 27px 25px;
+}
+
+.booking-price {
+  margin-bottom: 25px;
+}
+
+.booking-price u {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.booking-price span {
+  font-size: 17px;
+}
+
+.date-box b,
+.guest-row b {
+  font-size: 12px;
+}
+
+.date-box span,
+.guest-row span {
+  font-size: 16px;
+}
+
+.cancel {
+  font-size: 14px;
+}
+
+.reserve {
+  height: auto;
+  padding: 17px;
+  font-size: 16px;
+}
+
+.charge {
+  font-size: 14px;
+}
+
+/* Calendar: compact, but still has the same visual rhythm as the reference. */
+.calendar-wrap {
+  padding-top: 31px;
+  padding-bottom: 28px;
+}
+
+.calendar-wrap h2 {
+  margin: 0 0 14px;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.calendar-wrap .subtle {
+  font-size: 15px;
+}
+
+.cal-months {
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.month-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.week {
+  margin-bottom: 7px;
+  font-size: 12px;
+}
+
+.days {
+  gap: 2px;
+}
+
+.days span {
+  height: 37px;
+  font-size: 15px;
+}
+
+.calendar-bottom {
+  margin-top: 15px;
+}
+
+/* Rating */
+.rating-hero {
+  padding: 25px 0 41px;
+}
+
+.rating-hero > b {
+  font-size: 100px;
+  letter-spacing: -5px;
+}
+
+.rating-caption h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.rating-caption p {
+  font-size: 15px;
+}
+
+.rating-metric h3,
+.overall h3 {
+  font-size: 16px;
+}
+
+.rating-metric > b {
+  font-size: 20px;
+}
+
+.review-cards article p {
+  font-size: 16px;
+}
+
+/* Location — reference map is about 393 CSS px tall. */
+.location .map {
+  height: 394px;
+  margin: 28px 0 22px;
+  border-radius: 16px;
+}
+
+.location-name,
+.location > p {
+  font-size: 16px;
+}
+
+.neighborhood h3 {
+  font-size: 20px;
+}
+
+.neighborhood p {
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+/* Host / things */
+.host-section {
+  padding-top: 38px;
+  padding-bottom: 38px;
+}
+
+.host-card h3,
+.host-right h3 {
+  font-size: 20px;
+}
+
+.host-section p,
+.things-section p {
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.things-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.things-icon {
+  font-size: 28px;
+}
+
+.things-grid h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Nearby */
+.nearby-section {
+  padding-top: 34px;
+}
+
+.nearby-viewport {
+  margin-top: 24px;
+}
+
+.nearby-track {
+  gap: 24px;
+}
+
+.nearby-track article {
+  flex: 0 0 243px;
+  width: 243px;
+  min-width: 243px;
+}
+
+.nearby-track article img {
+  width: 243px;
+  height: 243px;
+  border-radius: 13px;
+}
+
+.nearby-track article h3 {
+  margin: 10px 0 6px;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.nearby-track article p {
+  font-size: 15px;
+}
+
+/* ===== FINAL LEFT/RIGHT SPACING CORRECTION =====
+   Preserve the reference's 653 / 96 / 372 proportions at narrower desktop
+   recording sizes instead of falling back to the earlier 48px-gap layout. */
+@media (max-width: 1167px) and (min-width: 901px) {
+  .listing-shell,
+  .hero-wrap,
+  .section-nav-inner {
+    width: 85.85vw !important;
+    max-width: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .top-layout {
+    grid-template-columns: 50% 28.49% !important;
+    column-gap: 7.35% !important;
+  }
+}
+
+
+/* === FINAL REFERENCE TITLE / PHOTO BUTTON PASS === */
+@font-face {
+  font-family: "Airbnb Cereal VF";
+  src: url("/fonts/AirbnbCerealVF.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Keep the existing hero/gallery geometry intact; only match its title controls. */
+.title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.title-row h1 {
+  width: 602.24px;
+  flex: 0 0 602.24px;
+  min-width: 602.24px;
+  margin: 0;
+  font-family: "Airbnb Cereal VF", Circular, -apple-system, BlinkMacSystemFont,
+    "system-ui", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: #222;
+  white-space: nowrap;
+}
+
+.title-actions {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.title-actions button {
+  border: none;
+  background: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-family: "Airbnb Cereal VF", Circular, -apple-system, BlinkMacSystemFont,
+    "system-ui", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 500;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.title-actions button:first-child {
+  width: 81.15px;
+  height: 34.4px;
+}
+
+.title-actions button:last-child {
+  width: 75px;
+  height: 34.4px;
+}
+
+.title-actions button > span:last-child {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.title-action-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  flex: 0 0 16px;
+}
+
+.title-action-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  overflow: visible;
+}
+
+/* Exact reference geometry for Show all photos; hero grid itself is untouched. */
+.show-photos {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 7px 15px;
+  font-family: "Airbnb Cereal VF", Circular, -apple-system, BlinkMacSystemFont,
+    "system-ui", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px #00000026;
+  box-sizing: border-box;
+}
+
+.show-photos svg {
+  width: 15px !important;
+  height: 15px !important;
+  flex: 0 0 15px;
+}
+
+/* === FINAL REFERENCE NAVBAR + PROVIDED LOGO PASS === */
+@font-face {
+  font-family: "Airbnb Cereal VF";
+  src: url("/fonts/AirbnbCerealVF.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body, button, input, textarea, select {
+  font-family: "Airbnb Cereal VF", Circular, -apple-system, BlinkMacSystemFont,
+    "system-ui", Roboto, "Helvetica Neue", sans-serif;
+}
+
+.navbar {
+  height: 88px !important;
+  border-bottom: 1px solid #eee;
+  position: relative !important;
+  top: auto !important;
+  background: #fff;
+  z-index: 50;
+}
+
+.nav-inner {
+  width: 1360.8px !important;
+  max-width: 1360.8px !important;
+  height: 88px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: grid !important;
+  grid-template-columns: 1fr auto 1fr !important;
+  align-items: center !important;
+}
+
+.brand {
+  justify-self: start !important;
+  min-width: 0 !important;
+  width: 103.4px !important;
+  height: 32px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  color: #ff385c !important;
+  gap: 0 !important;
+  font-size: 0 !important;
+  letter-spacing: normal !important;
+}
+
+.airbnb-logo-image {
+  display: block !important;
+  width: 200.4px !important;
+  height: 80px !important;
+  object-fit: contain !important;
+}
+
+.search-pill {
+  justify-self: center !important;
+  width: 403.13px !important;
+  min-width: 403.13px !important;
+  height: 48px !important;
+  padding: 0 8px !important;
+  gap: 0 !important;
+  border: 1px solid #ddd !important;
+  border-radius: 40px !important;
+  box-shadow: 0 1px 4px #00000014 !important;
+  background: #fff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.search-segment {
+  border: none !important;
+  background: none !important;
+  height: 48px !important;
+  padding: 0 16px !important;
+  border-radius: 40px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  font-weight: 500 !important;
+  white-space: nowrap !important;
+}
+
+.search-segment.anywhere { width: 149.31px !important; }
+.search-segment.anytime { width: 88.36px !important; }
+.search-segment.add-guests {
+  width: 105.85px !important;
+  color: #717171 !important;
+  font-weight: 400 !important;
+}
+
+.search-house-icon {
+  width: 48px !important;
+  height: 48px !important;
+  object-fit: fill !important;
+  display: block !important;
+  margin-left: -6px !important;
+  flex: 0 0 48px !important;
+}
+
+.search-pill > i {
+  width: 1px !important;
+  height: 24px !important;
+  flex: 0 0 1px !important;
+  background: #ddd !important;
+}
+
+.search-btn {
+  width: 32px !important;
+  height: 32px !important;
+  flex: 0 0 32px !important;
+  margin-left: 8px !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 50% !important;
+  background: #ff385c !important;
+  color: #fff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.nav-actions {
+  justify-self: end !important;
+  min-width: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-weight: 500 !important;
+}
+
+.host-link {
+  width: 125.28px !important;
+  height: 44.01px !important;
+  padding: 12px 14px !important;
+  border: none !important;
+  border-radius: 22px !important;
+  background: transparent !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  font-weight: 500 !important;
+  white-space: nowrap !important;
+}
+
+.nav-actions .circle {
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 50% !important;
+  background: #f2f2f2 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.nav-actions .circle svg {
+  width: 16px !important;
+  height: 16px !important;
+}
