@@ -115,18 +115,18 @@ export const reviewChips = [
 
 export const nearbyPages = [
   [
-    ['Beautiful Studio with a view to die for', '₹23,600', '4.91', '/images/photo-4.jpg'],
-    ['NAQAB - 1bhk with private pool', '₹42,218', '4.95', '/images/photo-3.jpg'],
-    ['Greentique Luxury Flat with plunge pool, Calangute', '₹44,506', '4.94', '/images/photo-2.jpg'],
-    ['The Tropical Studio | 5 mins to Beach', '₹22,824', '4.96', '/images/hero-bedroom.jpg'],
-    ['Luxury Casa Bella 1BHK with plunge pool, Calangute', '₹39,942', '4.95', '/images/hero-living2.jpg']
+    ['Beautiful Studio with a view to die for', '₹23,600', '4.91', '/images/s1.jpeg'],
+    ['NAQAB - 1bhk with private pool', '₹42,218', '4.95', '/images/s2.jpeg'],
+    ['Greentique Luxury Flat with plunge pool, Calangute', '₹44,506', '4.94', '/images/s3.jpeg'],
+    ['The Tropical Studio | 5 mins to Beach', '₹22,824', '4.96', '/images/s4.jpeg'],
+    ['Luxury Casa Bella 1BHK with plunge pool, Calangute', '₹39,942', '4.95', '/images/s5.jpeg']
   ],
   [
-    ['The Tropical Studio | 5 mins to Beach', '₹22,824', '4.96', '/images/hero-bedroom.jpg'],
-    ['Luxury Casa Bella 1BHK with plunge pool, Calangute', '₹39,942', '4.95', '/images/hero-living2.jpg'],
-    ['Kanso by Earthen Window | Jacuzzi | Terrace | Pool', '₹45,648', '5.0', '/images/photo-5.jpg'],
-    ['Luxury Apt | Private Pool | 6 Mins from Beach', '₹48,786', '4.93', '/images/photo-3.jpg'],
-    ['Serendipity Cottage - Calm Stay in Calangute-Baga.', '₹22,824', '4.92', '/images/photo-2.jpg']
+    ['The Tropical Studio | 5 mins to Beach', '₹22,824', '4.96', '/images/s4.jpeg'],
+    ['Luxury Casa Bella 1BHK with plunge pool, Calangute', '₹39,942', '4.95', '/images/s5.jpeg'],
+    ['Kanso by Earthen Window | Jacuzzi | Terrace | Pool', '₹45,648', '5.0', '/images/s6.jpeg'],
+    ['Luxury Apt | Private Pool | 6 Mins from Beach', '₹48,786', '4.93', '/images/s2.jpeg'],
+    ['Serendipity Cottage - Calm Stay in Calangute-Baga.', '₹22,824', '4.92', '/images/s3.jpeg']
   ]
 ];
 
