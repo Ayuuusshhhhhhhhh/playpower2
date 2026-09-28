@@ -39,8 +39,7 @@ body {
 
 /* ---------- Logo: tight-cropped mark, sized like the live site (102px wide) ---------- */
 .brand { width: 102px !important; height: 35px !important; }
-/* Header rail = content rail (1306px) so logo and menu line up with the title and gallery edges. */
-.nav-inner { width: 1306px !important; max-width: 1306px !important; }
+
 .airbnb-logo-image { width: 102px !important; height: auto !important; }
 
 /* ---------- Buttons: Primary (gradient) / Secondary (#222) ---------- */
@@ -62,18 +61,6 @@ body {
 .reserve:active,
 .nav-price button:active { transform: scale(0.96); background: #eb4c60 !important; }
 
-.kit-btn-secondary,
-.host-details button.kit-btn-secondary {
-  background: var(--shade-02) !important;
-  color: #fff !important;
-  border: 0 !important;
-  border-radius: 8px !important;
-  padding: 14px 24px !important;
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  line-height: 20px !important;
-}
-.kit-btn-secondary:hover { background: #000 !important; }
 
 /* Outlined buttons (Show all amenities / reviews) */
 .show-reviews-btn,
@@ -246,20 +233,10 @@ body {
 .review-meta { color: var(--shade-02) !important; }
 
 /* ---------- Listing card (nearby) ---------- */
-/* 5 cards + 4×24px gaps = 1306px rail; App.jsx pages by 266px (242 + 24). */
-.nearby-track article { flex: 0 0 242px !important; width: 242px !important; min-width: 242px !important; }
 .nearby-track article img {
-  width: 242px !important;
   border-radius: 12px !important;
   aspect-ratio: 1 / 0.95;
   height: auto !important;
-}
-.nearby-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 8px;
-  margin-top: 12px;
 }
 .nearby-track article h3 {
   margin: 0 !important;
@@ -271,7 +248,6 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.nearby-rating { font-size: 14px; line-height: 19px; white-space: nowrap; flex: 0 0 auto; }
 .nearby-track article p {
   margin: 4px 0 0 !important;
   font-size: 14px !important;
@@ -301,3 +277,218 @@ body {
 /* ---------- Section headings / body rhythm ---------- */
 .content-section h2 { font-size: 22px; line-height: 26px; font-weight: 600; }
 .subtle, .location-name + p { color: var(--neutral-08); }
+
+/* ================= Reference geometry (measured at 1710px from the reference build) =================
+   Page rail 1120px, header padded 80px, hero 560/272/272 × 494, columns 652/96/372. */
+.nav-inner { width: auto !important; max-width: none !important; padding: 0 80px !important; }
+.hero-wrap,
+.listing-shell,
+.section-nav-inner { width: 1120px !important; max-width: calc(100vw - 80px) !important; }
+.top-layout { grid-template-columns: 652px 372px !important; column-gap: 96px !important; }
+.hero-grid { height: 494px !important; grid-template-columns: 560px 1fr 1fr !important; gap: 8px !important; }
+
+.sleep-grid { gap: 16px !important; }
+.sleep-grid img { height: 212px !important; border-radius: 12px !important; }
+
+.host-logo, .host-logo img { width: 88px !important; height: 88px !important; }
+
+.laurel-wrap { width: 72px !important; height: 110px !important; }
+.laurel-wrap-img { transform: none !important; }
+.laurel-img { width: 72px; height: 110px; object-fit: contain; display: block; }
+
+/* Nearby: 5 × 208px squares + 4 × 20px gaps = 1120px; App.jsx pages by 228px. */
+.nearby-track { gap: 20px !important; }
+.nearby-track article { flex: 0 0 208px !important; width: 208px !important; min-width: 208px !important; }
+.nearby-track article img { width: 208px !important; height: 208px !important; aspect-ratio: auto; }
+
+/* --- Vertical rhythm, left column (deltas measured vs reference) --- */
+.intro { padding-bottom: 0 !important; border-bottom: 0 !important; }
+.intro h2 { line-height: 26px !important; }
+.host-summary { padding: 16px 0 24px !important; }
+.highlight { padding: 10px 0 11px !important; }
+.highlights { padding-bottom: 18px !important; }
+.description { padding-top: 25px !important; }
+.translation { margin-bottom: 10px !important; }
+.description-body.collapsed { max-height: 96px !important; }
+.sleep-grid > div { gap: 14px !important; }
+.amenity-grid span, .amenity-grid div { white-space: nowrap; }
+.days { gap: 0 !important; }
+.days span { height: 42.67px !important; }
+
+/* ================= Reference visual parity ================= */
+/* Reserve: same kit gradient, but pill-shaped like the reference/live site. */
+.reserve, .nav-price button { border-radius: 999px !important; }
+
+.cancel {
+  background: var(--neutral-01) !important;
+  color: var(--neutral-07) !important;
+  border-radius: 8px !important;
+  padding: 8px !important;
+  margin: 16px 0 18px !important;
+  line-height: 18px !important;
+}
+.cancel b { color: var(--shade-02); font-weight: 600; }
+
+.discount { padding: 14px 16px 14px 24px !important; margin-bottom: 24px !important; }
+.discount-icon svg { fill: #639857; stroke: #4f7d45; }
+
+.gf-laurel { width: 20px; height: 34px; object-fit: contain; }
+
+.host-details button {
+  background: #f2f2f2 !important;
+  color: var(--shade-02) !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  padding: 14px 24px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+.host-details button:hover { background: var(--neutral-02) !important; }
+.protection-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 36px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--neutral-07);
+}
+.protection-note svg { flex: 0 0 24px; color: var(--neutral-07); }
+
+.review-chips { flex-wrap: nowrap !important; overflow-x: auto; scrollbar-width: none; }
+.review-chips button { flex: 0 0 auto; padding: 14px 16px !important; }
+.chip-emoji { font-size: 18px; line-height: 1; }
+.chip-count { color: var(--neutral-07); }
+
+/* Nearby cards: title (2 lines) then price + rating, as in the reference. */
+.nearby-track article h3 {
+  margin: 12px 0 2px !important;
+  font-size: 15px !important;
+  line-height: 20px !important;
+  font-weight: 500 !important;
+  -webkit-line-clamp: 2;
+}
+.nearby-track article p { color: var(--shade-02) !important; font-size: 14px !important; margin: 0 !important; }
+.nearby-track article p b { font-weight: 400 !important; margin-left: 6px; }
+
+/* --- Right column rhythm (reference: aside top = h2 top; card 366 tall) --- */
+.booking-side { padding-top: 0 !important; }
+.booking-card { padding: 23px 24px 25px !important; }
+.booking-price { margin-bottom: 18px !important; line-height: 31px !important; }
+.date-box > div { height: 58px !important; box-sizing: border-box; padding-top: 11px !important; padding-bottom: 0 !important; }
+.date-box .guest-row { height: 57px !important; box-sizing: border-box; padding-top: 11px !important; padding-bottom: 0 !important; }
+.charge { margin-top: 16px !important; line-height: 20px !important; }
+.report { margin-top: 26px !important; }
+
+/* --- Calendar → ratings gap --- */
+.rating-section { padding-top: 16px !important; }
+.sleep-grid > div { gap: 0 !important; }
+.sleep-grid b { margin-top: 14px; }
+.sleep-grid span { margin-top: 2px; }
+
+/* --- Booking date rows: label at +11, value 16px under it --- */
+.date-box > div, .date-box .guest-row { padding-top: 5px !important; }
+.date-box b { display: block; margin: 0 !important; }
+.date-box span { display: block; margin-top: 2px !important; }
+
+/* --- Ratings --- */
+.rating-section { padding-top: 33px !important; }
+.rating-hero > b { line-height: 143px !important; }
+.rating-hero { padding-bottom: 50px !important; }
+.rating-metric > b { margin-top: -6px; }
+.rating-breakdown { padding-bottom: 0 !important; }
+.review-chips { margin: -5px 0 44px !important; }
+.review-cards { row-gap: 48px !important; }
+.review-cards article { min-height: 0 !important; }
+.review-meta { margin: 6px 0 8px !important; }
+.review-cards article p { line-height: 21px !important; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.show-reviews-btn { margin-top: 38px !important; }
+
+/* --- Location --- */
+.location { padding-top: 59px !important; }
+.location .location-name { margin-top: -2px !important; }
+.location .map { height: 473px !important; }
+.neighborhood { margin-top: -2px !important; }
+.neighborhood p { margin-top: -2px !important; margin-bottom: 8px !important; }
+.location + .host-section, .host-section { padding-top: 56px !important; }
+
+/* --- Host (reference: 340 card / 48 gap / 732 right) --- */
+.host-layout { grid-template-columns: 340px 732px !important; gap: 48px !important; margin-top: 0 !important; }
+.host-section h2 { margin-bottom: 24px !important; }
+.host-card {
+  grid-template-columns: 190px 100px !important;
+  gap: 0 !important;
+  height: 259px;
+  box-sizing: border-box;
+  padding: 32px 25px 0 !important;
+  margin-bottom: 22px !important;
+  border-radius: 24px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+}
+.host-card-main { padding-right: 0 !important; border-right: 0 !important; }
+.host-logo { margin: 0 auto 12px !important; }
+.host-card h3 { font-size: 32px !important; line-height: 36px !important; margin: 0 0 2px !important; font-weight: 600; }
+.host-stats { gap: 0 !important; justify-content: flex-start !important; padding-left: 21px; border-left: 1px solid var(--neutral-03); height: 197px; }
+.host-stats > div { height: 66px; box-sizing: border-box; padding: 10px 0 0 !important; gap: 0 !important; }
+.host-stats > div:last-child { border-bottom: 0 !important; }
+.host-stats b { font-size: 22px; line-height: 28px; font-weight: 600; }
+.host-stats span { font-size: 12px !important; line-height: 17px; }
+.host-fact { margin: 0 0 14px !important; }
+.host-right > h3 { margin: 0 0 16px !important; font-size: 20px !important; line-height: 25px; }
+.cohost-grid { grid-template-columns: repeat(3, 239px) !important; gap: 16px 8px !important; }
+.cohost { gap: 10px !important; height: 34px; }
+.cohost img, .cohost > span { width: 34px !important; height: 34px !important; }
+.host-details { margin-top: 30px !important; }
+.host-details h3 { margin: 0 0 16px !important; font-size: 20px !important; line-height: 25px; }
+.host-details p { margin: 0 !important; line-height: 24px !important; font-size: 16px !important; }
+.host-details button { margin-top: 18px !important; }
+.protection-note { margin-top: 24px; }
+
+/* --- Things to know / Nearby --- */
+.things-section { padding-top: 62px !important; }
+.things-grid > div { padding-right: 0 !important; }
+.things-grid p { font-size: 15px !important; line-height: 21px !important; max-width: none !important; }
+.things-grid { grid-template-columns: repeat(3, 352px) !important; column-gap: 32px !important; }
+.nearby-section { padding-top: 41px !important; }
+.nearby-viewport { margin-top: -7px !important; }
+
+.sleep-section { padding-bottom: 25px !important; }
+.date-box .guest-row { display: flex !important; flex-direction: column; justify-content: flex-start !important; align-items: flex-start !important; position: relative; text-align: left; }
+.date-box .guest-row svg { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); }
+.calendar-wrap { padding-top: 26px !important; }
+
+/* Rating hero: laurels hug the number (reference: 72px laurels, ~8px from the digits). */
+.rating-hero { grid-template-columns: 1fr 72px auto 72px 1fr !important; column-gap: 8px !important; }
+.rating-hero > .laurel-wrap:first-child { grid-column: 2; }
+.rating-hero > b { grid-column: 3; }
+.rating-hero > .laurel-wrap-img { grid-column: 4; }
+.rating-hero > .rating-caption { grid-column: 1 / -1; }
+.review-chips button b { font-weight: 600; color: var(--shade-02); }
+
+/* --- Calendar selection (reference): black circles on the ends, one continuous
+   grey band between them that starts/ends at the circle centres. --- */
+.days span { position: relative; isolation: isolate; border-radius: 0 !important; background: none; cursor: pointer; }
+.days span:empty { cursor: default; }
+.days .range { background: var(--neutral-01) !important; }
+.days .selected { background: none !important; color: #fff !important; }
+.days .range-start { background: linear-gradient(to right, transparent 50%, var(--neutral-01) 50%) !important; }
+.days .range-end { background: linear-gradient(to left, transparent 50%, var(--neutral-01) 50%) !important; }
+.days span::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 42.67px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  z-index: -1;
+}
+.days .selected::before { background: var(--shade-02); }
+.days span:not(.selected):not(.muted-day):not(:empty):hover::before { box-shadow: inset 0 0 0 1.5px var(--shade-02); }
+.days .muted-day { color: #ccc !important; text-decoration: line-through; cursor: default; }
+
+.calendar-bottom button {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 26px; padding: 0;
+  border: 1.5px solid var(--neutral-06); border-radius: 6px;
+}
+.calendar-bottom button svg { width: 20px; height: 20px; }

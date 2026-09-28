@@ -63,7 +63,15 @@ export function HostSection() {
             <h3>Host details</h3>
             <p>Response rate: 100%</p>
             <p>Responds within an hour</p>
-            <button type="button" className="kit-btn-secondary">Message host</button>
+            <button type="button">Message host</button>
+          </div>
+
+          <div className="protection-note">
+            <Icon name="shield" size={24} />
+            <span>
+              To help protect your payment, always use Airbnb to send money and
+              communicate with hosts.
+            </span>
           </div>
         </div>
       </div>

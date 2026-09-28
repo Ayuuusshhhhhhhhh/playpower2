@@ -6,18 +6,18 @@ export function BookingCard() {
 
   return (
     <aside className="booking-side">
-      <div className="discount">
-        <span className="discount-icon"><Icon name="tag" size={25} /></span>
-        <span>
-          Get 10% off your next stay.
-          <br />
-          <u>Terms apply</u>
-        </span>
-        <button type="button">Claim</button>
-      </div>
-
       <div className="booking-holder">
         <div className="booking-sticky">
+          <div className="discount">
+            <span className="discount-icon"><Icon name="tag" size={25} /></span>
+            <span>
+              Get 10% off your next stay.
+              <br />
+              <u>Terms apply</u>
+            </span>
+            <button type="button">Claim</button>
+          </div>
+
           <div className="booking-card">
             <div className="booking-price">
               <u>₹28,499</u> <span>for 5 nights</span>

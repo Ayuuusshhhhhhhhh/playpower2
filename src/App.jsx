@@ -100,7 +100,7 @@ function Calendar() {
                       key={`${month}-${day}`}
                       className={
                         selected
-                          ? 'selected'
+                          ? `selected ${day === 18 ? 'range-start' : 'range-end'}`
                           : inRange
                             ? 'range'
                             : muted
@@ -128,30 +128,6 @@ function Calendar() {
   );
 }
 
-function Laurel() {
-  return (
-    <svg
-      className="laurel-svg"
-      viewBox="0 0 90 120"
-      aria-hidden="true"
-    >
-      <g
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinecap="round"
-      >
-        <path d="M66 112C42 93 33 65 46 20" />
-        <path d="M46 95c-12-1-20-6-25-15 10-2 19 2 25 10" />
-        <path d="M40 76c-11-2-18-8-22-17 10 0 18 5 23 13" />
-        <path d="M37 57c-9-3-15-9-18-17 9 1 15 6 19 13" />
-        <path d="M39 40c-7-4-11-10-12-17 8 2 12 6 14 12" />
-        <path d="M43 25c-5-4-7-9-6-14 6 2 9 6 10 11" />
-      </g>
-    </svg>
-  );
-}
-
 function RatingMetricIcon({ name }) {
   return (
     <span className="rating-metric-icon">
@@ -174,11 +150,11 @@ function RatingSection() {
     <section id="reviews" className="content-section rating-section">
       <div className="rating-hero">
         <div className="laurel-wrap">
-          <Laurel />
+          <img className="laurel-img" src="/images/laurel-left.png" alt="" />
         </div>
         <b>4.95</b>
-        <div className="laurel-wrap right">
-          <Laurel />
+        <div className="laurel-wrap laurel-wrap-img">
+          <img className="laurel-img" src="/images/laurel-right.png" alt="" />
         </div>
 
         <div className="rating-caption">
@@ -220,10 +196,10 @@ function RatingSection() {
       </div>
 
       <div className="review-chips">
-        {reviewChips.map(([icon, count, label]) => (
-          <button type="button" key={count}>
-            <Icon name={icon} size={18} />
-            <b>{count}</b> {label}
+        {reviewChips.map(([icon, label, count]) => (
+          <button type="button" key={label}>
+            <span className="chip-emoji" aria-hidden="true">{icon}</span>
+            <b>{label}</b> <span className="chip-count">{count}</span>
           </button>
         ))}
       </div>
@@ -266,7 +242,7 @@ function RatingSection() {
 function Location() {
   return (
     <section id="location" className="content-section location">
-      <h2>Where you'll be</h2>
+      <h2>Where you’ll be</h2>
       <p className="location-name">Candolim, Goa, India</p>
 
       <div className="map">
@@ -352,7 +328,7 @@ function Nearby() {
   const [page, setPage] = useState(0);
   const allCards = [...nearbyPages[0], ...nearbyPages[1]];
   const cardStep = 5;
-  const pageWidth = 266;
+  const pageWidth = 228; // 208px card + 20px gap
 
   return (
     <section className="content-section nearby-section">
@@ -389,11 +365,10 @@ function Nearby() {
           {allCards.map(([title, price, rating, image], cardIndex) => (
             <article key={cardIndex}>
               <img src={image} alt="" />
-              <div className="nearby-row">
-                <h3>{title}</h3>
-                <span className="nearby-rating">★ {rating}</span>
-              </div>
-              <p><b>{price}</b> for 5 nights</p>
+              <h3>{title}</h3>
+              <p>
+                {price} <b>★ {rating}</b>
+              </p>
             </article>
           ))}
         </div>
@@ -525,13 +500,13 @@ export default function App() {
           <main className="top-main">
             <section className="intro">
               <h2>{listing.subtitle}</h2>
-              <p>3 guests · 1 bedroom · 1 bed · 1 bath</p>
+              <p>3 guests · 1 bedroom · 1 bed · 1 bathroom</p>
 
               <div className="gf-card">
                 <div className="gf-badge">
-                  <Laurel />
+                  <img className="gf-laurel" src="/images/laurel-left.png" alt="" />
                   <b>Guest<br />favourite</b>
-                  <Laurel />
+                  <img className="gf-laurel" src="/images/laurel-right.png" alt="" />
                 </div>
                 <p className="gf-copy">
                   One of the most loved homes on Airbnb, according to guests
@@ -551,7 +526,7 @@ export default function App() {
             <Highlights />
             <DescriptionSection />
 
-            <section className="content-section">
+            <section className="content-section sleep-section">
               <h2>Where you'll sleep</h2>
               <div className="sleep-grid">
                 <div>
@@ -580,14 +555,6 @@ export default function App() {
           <RatingSection />
           <Location />
           <HostSection />
-
-          <section className="content-section protection">
-            <div><Icon name="shield" size={24} /></div>
-            <span>
-              To help protect your payment, always use Airbnb to send money and
-              communicate with hosts.
-            </span>
-          </section>
 
           <Things />
           <Nearby />
