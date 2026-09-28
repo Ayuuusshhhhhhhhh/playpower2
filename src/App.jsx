@@ -120,7 +120,7 @@ function Calendar() {
 
       <div className="calendar-bottom">
         <button type="button" aria-label="Calendar">
-          <span className="calendar-icon">▭</span>
+          <Icon name="keyboard" size={22} />
         </button>
         <u>Clear dates</u>
       </div>
@@ -222,7 +222,7 @@ function RatingSection() {
       <div className="review-chips">
         {reviewChips.map(([icon, count, label]) => (
           <button type="button" key={count}>
-            <span>{icon}</span>
+            <Icon name={icon} size={18} />
             <b>{count}</b> {label}
           </button>
         ))}
@@ -279,7 +279,7 @@ function Location() {
         </div>
         <div className="map-dot left-dot" />
         <div className="map-dot right-dot" />
-        <div className="map-marker">⌂</div>
+        <div className="map-marker"><Icon name="home" size={28} /></div>
       </div>
 
       <p>Exact location will be provided after booking.</p>
@@ -302,7 +302,7 @@ function Location() {
 function Things() {
   const columns = [
     {
-      icon: '▣',
+      icon: 'calendar',
       title: 'Cancellation policy',
       paragraphs: [
         'Free cancellation before 17 October. Cancel before check-in on 18 October for a partial refund.',
@@ -310,7 +310,7 @@ function Things() {
       ],
     },
     {
-      icon: '🔑',
+      icon: 'key',
       title: 'House rules',
       paragraphs: [
         'Check-in after 2:00 pm',
@@ -319,7 +319,7 @@ function Things() {
       ],
     },
     {
-      icon: '◉',
+      icon: 'shield',
       title: 'Safety & property',
       paragraphs: [
         'Carbon monoxide alarm not reported',
@@ -335,7 +335,7 @@ function Things() {
       <div className="things-grid">
         {columns.map((column) => (
           <div key={column.title}>
-            <div className="things-icon">{column.icon}</div>
+            <div className="things-icon"><Icon name={column.icon} size={24} /></div>
             <h3>{column.title}</h3>
             {column.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
@@ -386,13 +386,14 @@ function Nearby() {
             transform: `translateX(-${page * cardStep * pageWidth}px)`,
           }}
         >
-          {allCards.map(([title, price, rating, image]) => (
-            <article key={title}>
+          {allCards.map(([title, price, rating, image], cardIndex) => (
+            <article key={cardIndex}>
               <img src={image} alt="" />
-              <h3>{title}</h3>
-              <p>
-                {price} <b>★ {rating}</b>
-              </p>
+              <div className="nearby-row">
+                <h3>{title}</h3>
+                <span className="nearby-rating">★ {rating}</span>
+              </div>
+              <p><b>{price}</b> for 5 nights</p>
             </article>
           ))}
         </div>
@@ -526,24 +527,22 @@ export default function App() {
               <h2>{listing.subtitle}</h2>
               <p>3 guests · 1 bedroom · 1 bed · 1 bath</p>
 
-              <div className="favourite">
-                <div className="favourite-copy">
-                  <div className="favourite-title">
-                    <Laurel />
-                    <b>Guest<br />favourite</b>
-                    <Laurel />
-                  </div>
-                  <span>
-                    One of the most loved homes on Airbnb, according to guests
-                  </span>
+              <div className="gf-card">
+                <div className="gf-badge">
+                  <Laurel />
+                  <b>Guest<br />favourite</b>
+                  <Laurel />
                 </div>
-                <div>
+                <p className="gf-copy">
+                  One of the most loved homes on Airbnb, according to guests
+                </p>
+                <div className="gf-stat">
                   <b>4.95</b>
-                  <span>★★★★★</span>
+                  <span className="gf-stars">★★★★★</span>
                 </div>
-                <div>
+                <div className="gf-stat">
                   <b>19</b>
-                  <span>Reviews</span>
+                  <u>Reviews</u>
                 </div>
               </div>
             </section>
@@ -583,7 +582,7 @@ export default function App() {
           <HostSection />
 
           <section className="content-section protection">
-            <div>◯</div>
+            <div><Icon name="shield" size={24} /></div>
             <span>
               To help protect your payment, always use Airbnb to send money and
               communicate with hosts.

@@ -1,4 +1,5 @@
 import { coHosts } from '../data/listing';
+import { Icon } from './Icon';
 
 export function HostSection() {
   return (
@@ -38,8 +39,8 @@ export function HostSection() {
             </div>
           </div>
 
-          <p>♀️ Born in the 80s</p>
-          <p>🎓 Where I went to school: NICMAR GOA</p>
+          <p className="host-fact"><Icon name="balloon" size={24} /> Born in the 80s</p>
+          <p className="host-fact"><Icon name="school" size={24} /> Where I went to school: NICMAR GOA</p>
         </div>
 
         <div className="host-right">
@@ -62,7 +63,7 @@ export function HostSection() {
             <h3>Host details</h3>
             <p>Response rate: 100%</p>
             <p>Responds within an hour</p>
-            <button type="button">Message host</button>
+            <button type="button" className="kit-btn-secondary">Message host</button>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ export function Navbar() {
     <header className="navbar">
       <div className="nav-inner">
         <a className="brand" href="#photos" aria-label="Airbnb home">
-          <img className="airbnb-logo-image" src="/images/Airbnb_Logo_Belo.png" alt="airbnb" />
+          <img className="airbnb-logo-image" src="/images/airbnb-logo.png" alt="airbnb" />
         </a>
 
         <div className="search-pill" role="search">

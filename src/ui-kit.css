@@ -1,0 +1,303 @@
+/* Airbnb UI Kit (Figma community) — tokens + component specs.
+   Loaded after styles.css so it wins over the earlier override passes.
+   ponytail: !important because styles.css already stacks 119 of them; fold into styles.css if it ever gets cleaned up. */
+
+:root {
+  --primary-01: #f6475f;
+  --primary-02: #ff385c;
+  --accent-01: #f6d7df;
+  --accent-02: #d03660;
+  --discount: #008a05;
+  --shade-01: #fff;
+  --shade-02: #222;
+  --neutral-01: #f7f7f7;
+  --neutral-02: #ebebeb;
+  --neutral-03: #ddd;
+  --neutral-04: #d3d3d3;
+  --neutral-05: #c2c2c2;
+  --neutral-06: #b0b0b0;
+  --neutral-07: #717171;
+  --neutral-08: #5e5e5e;
+  --gradient-primary: radial-gradient(circle at 0% 100%, #d33753 0%, #d13660 52.8%, #c72d65 100%);
+  --gradient-hover: radial-gradient(circle at 100% 0%, #c72d65 0%, #d23760 48.4%, #d23755 100%);
+  --elevation-02: 0 1px 5px rgba(0, 0, 0, 0.19);
+  --elevation-03: 0 6px 16px rgba(0, 0, 0, 0.12);
+
+  --text: var(--shade-02);
+  --muted: var(--neutral-07);
+  --line: var(--neutral-03);
+  --soft: var(--neutral-01);
+  --pink: var(--primary-02);
+  --airbnb: var(--primary-02);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--shade-02);
+}
+
+/* ---------- Logo: tight-cropped mark, sized like the live site (102px wide) ---------- */
+.brand { width: 102px !important; height: 35px !important; }
+/* Header rail = content rail (1306px) so logo and menu line up with the title and gallery edges. */
+.nav-inner { width: 1306px !important; max-width: 1306px !important; }
+.airbnb-logo-image { width: 102px !important; height: auto !important; }
+
+/* ---------- Buttons: Primary (gradient) / Secondary (#222) ---------- */
+.reserve,
+.nav-price button {
+  background: var(--gradient-primary) !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+  transition: background-position 0.2s, transform 0.1s;
+}
+.reserve { width: 100% !important; height: auto !important; padding: 14px 24px !important; }
+.nav-price button { padding: 10px 24px !important; height: auto !important; }
+.reserve:hover,
+.nav-price button:hover { background: var(--gradient-hover) !important; }
+.reserve:active,
+.nav-price button:active { transform: scale(0.96); background: #eb4c60 !important; }
+
+.kit-btn-secondary,
+.host-details button.kit-btn-secondary {
+  background: var(--shade-02) !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  padding: 14px 24px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+}
+.kit-btn-secondary:hover { background: #000 !important; }
+
+/* Outlined buttons (Show all amenities / reviews) */
+.show-reviews-btn,
+.show-amenities,
+.amenities > button {
+  border: 1px solid var(--shade-02) !important;
+  border-radius: 8px !important;
+  padding: 13px 23px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+  background: #fff !important;
+}
+.show-reviews-btn:hover,
+.amenities > button:hover { background: var(--neutral-01) !important; }
+
+:focus-visible {
+  outline: 2px solid var(--shade-02);
+  outline-offset: 2px;
+}
+
+/* ---------- Guest favourite card ---------- */
+.gf-card {
+  display: flex;
+  align-items: center;
+  height: 88px;
+  margin-top: 32px;
+  padding: 0 24px 0 20px;
+  border: 1px solid var(--neutral-03);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.gf-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+  padding-right: 20px;
+}
+.gf-badge .laurel-svg {
+  width: 22px;
+  height: 36px;
+  color: var(--shade-02);
+}
+.gf-badge .laurel-svg:last-child { transform: scaleX(-1); }
+.gf-badge b {
+  font-size: 17px;
+  line-height: 19px;
+  font-weight: 600;
+  text-align: center;
+}
+.gf-copy {
+  flex: 1 1 auto;
+  margin: 0;
+  padding-right: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--shade-02);
+}
+.gf-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 20px;
+  border-left: 1px solid var(--neutral-03);
+  flex: 0 0 auto;
+}
+.gf-stat:last-child { padding-right: 0; }
+.gf-stat b { font-size: 22px; line-height: 26px; font-weight: 600; }
+.gf-stat .gf-stars { font-size: 9px; letter-spacing: 1px; line-height: 12px; }
+.gf-stat u { font-size: 12px; line-height: 16px; font-weight: 500; text-underline-offset: 2px; }
+
+/* ---------- Reservation card ---------- */
+.booking-card {
+  border: 1px solid var(--neutral-03) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--elevation-03) !important;
+  padding: 24px !important;
+}
+.booking-price { font-size: 16px !important; line-height: 26px !important; }
+.booking-price u {
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.date-box {
+  border: 1px solid var(--neutral-06) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+.date-box > div + div { border-left: 1px solid var(--neutral-06) !important; }
+.date-box .guest-row { border-top: 1px solid var(--neutral-06) !important; }
+.date-box b {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em;
+  line-height: 12px !important;
+}
+.date-box span {
+  font-size: 14px !important;
+  line-height: 18px !important;
+  color: var(--neutral-08) !important;
+}
+.cancel {
+  background: transparent !important;
+  color: var(--shade-02) !important;
+  font-size: 14px !important;
+  padding: 0 !important;
+  margin: 16px 0 !important;
+  text-align: center;
+}
+.charge {
+  color: var(--neutral-08) !important;
+  font-size: 14px !important;
+  margin-top: 12px !important;
+  text-align: center;
+}
+
+/* Discount → Callout (Property Highlight) */
+.discount {
+  border: 1px solid var(--neutral-03) !important;
+  border-radius: 12px !important;
+  padding: 20px 24px !important;
+  box-shadow: none !important;
+}
+.discount > span:nth-child(2) { font-size: 16px; line-height: 20px; }
+.discount-icon { color: var(--accent-02) !important; }
+.discount button {
+  border-radius: 8px !important;
+  background: var(--neutral-01) !important;
+  border: 0 !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  padding: 10px 16px !important;
+}
+
+/* ---------- Ratings bars (Reviews → Review Scale) ---------- */
+.bar-row > div {
+  height: 4px !important;
+  border-radius: 4px !important;
+  background: var(--neutral-04) !important;
+  overflow: hidden;
+}
+.bar-row i { height: 4px !important; border-radius: 4px !important; background: var(--shade-02) !important; }
+.bar-row span { font-size: 12px !important; color: var(--shade-02); }
+
+/* Review chips */
+.review-chips button {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 10px 16px !important;
+  border: 1px solid var(--neutral-03) !important;
+  border-radius: 999px !important;
+  font-size: 14px !important;
+  line-height: 18px !important;
+  background: #fff !important;
+}
+.review-chips button:hover { border-color: var(--shade-02) !important; }
+.review-chips button b { font-weight: 600; }
+
+/* Review cards */
+.review-head b { font-size: 16px; font-weight: 600; }
+.review-head small,
+.review-meta { color: var(--neutral-08) !important; font-size: 14px !important; }
+.review-meta { color: var(--shade-02) !important; }
+
+/* ---------- Listing card (nearby) ---------- */
+/* 5 cards + 4×24px gaps = 1306px rail; App.jsx pages by 266px (242 + 24). */
+.nearby-track article { flex: 0 0 242px !important; width: 242px !important; min-width: 242px !important; }
+.nearby-track article img {
+  width: 242px !important;
+  border-radius: 12px !important;
+  aspect-ratio: 1 / 0.95;
+  height: auto !important;
+}
+.nearby-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 12px;
+}
+.nearby-track article h3 {
+  margin: 0 !important;
+  font-size: 15px !important;
+  line-height: 19px !important;
+  font-weight: 600 !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.nearby-rating { font-size: 14px; line-height: 19px; white-space: nowrap; flex: 0 0 auto; }
+.nearby-track article p {
+  margin: 4px 0 0 !important;
+  font-size: 14px !important;
+  line-height: 18px !important;
+  color: var(--neutral-08) !important;
+}
+.nearby-track article p b { color: var(--shade-02); font-weight: 600 !important; }
+.nearby-controls button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--neutral-03);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.nearby-controls button:not(:disabled):hover { box-shadow: var(--elevation-02); }
+
+/* ---------- Icon slots that used to be glyphs ---------- */
+.things-icon { height: auto !important; margin-bottom: 16px !important; line-height: 0 !important; }
+.map-marker { display: flex !important; align-items: center; justify-content: center; font-size: 0 !important; }
+.protection > div { display: flex; color: var(--primary-02) !important; }
+.host-fact { display: flex; align-items: center; gap: 12px; font-size: 16px; }
+.host-fact svg { flex: 0 0 24px; }
+
+/* ---------- Section headings / body rhythm ---------- */
+.content-section h2 { font-size: 22px; line-height: 26px; font-weight: 600; }
+.subtle, .location-name + p { color: var(--neutral-08); }

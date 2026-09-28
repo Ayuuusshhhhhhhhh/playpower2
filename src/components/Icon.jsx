@@ -1,6 +1,7 @@
+import { createElement, Fragment } from 'react';
 export function Icon({name,size=20}){
   const p={width:size,height:size,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:1.7,strokeLinecap:'round',strokeLinejoin:'round'};
-  const line=(...els)=>els;
+  const line=(...els)=>createElement(Fragment,null,...els);
   const paths={
     search: line(<circle cx="11" cy="11" r="6.5"/>,<path d="m16 16 4.5 4.5"/>),
     globe: line(<circle cx="12" cy="12" r="9"/>,<path d="M3 12h18M12 3c2.2 2.5 3.4 5.5 3.4 9s-1.2 6.5-3.4 9c-2.2-2.5-3.4-5.5-3.4-9S9.8 5 12 3Z"/>),
@@ -63,6 +64,14 @@ export function Icon({name,size=20}){
     gym: line(<path d="M6 9v6M9 7v10M15 7v10M18 9v6M9 12h6"/>),
     cleaning: line(<path d="M8 20h8M7 17h10M9 4h6M10 4v13M14 4v13"/>),
     calendar: line(<rect x="4" y="5" width="16" height="15" rx="1"/>,<path d="M8 3v4M16 3v4M4 9h16"/>),
+    shield: line(<path d="M12 3 5 6v5c0 4.5 3 8.2 7 10 4-1.8 7-5.5 7-10V6l-7-3Z"/>,<path d="m9 12 2 2 4-4"/>),
+    home: line(<path d="M4 11 12 4l8 7"/>,<path d="M6 9.5V20h12V9.5"/>,<path d="M10 20v-5h4v5"/>),
+    keyboard: line(<rect x="3" y="6" width="18" height="12" rx="2"/>,<path d="M7 10h.01M10 10h.01M13 10h.01M16 10h.01M8 14h8"/>),
+    school: line(<path d="m2 9 10-5 10 5-10 5L2 9Z"/>,<path d="M6 11v5c3 2 9 2 12 0v-5M22 9v6"/>),
+    balloon: line(<path d="M12 15c3.3 0 6-3 6-6.5S15.3 2 12 2 6 5 6 8.5 8.7 15 12 15Z"/>,<path d="m11 15-1 2h4l-1-2M12 17c0 2-2 3-1 5"/>),
+    sofa: line(<path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/>,<path d="M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v5H3v-5ZM6 18v2M18 18v2"/>),
+    gift: line(<rect x="4" y="9" width="16" height="11" rx="1"/>,<path d="M3 9h18M12 9v11M12 9c-2-4-6-4-6-1.5S10 9 12 9ZM12 9c2-4 6-4 6-1.5S14 9 12 9Z"/>),
+    gem: line(<path d="M6 4h12l3 5-9 11L3 9l3-5Z"/>,<path d="M3 9h18M9 4l3 16M15 4l-3 16"/>),
     'self-checkin': line(<path d="M7 20V4h10v16M10 12h4"/>,<path d="M4 20h16"/>),
   };
   return <svg aria-hidden="true" {...p}>{paths[name] || null}</svg>

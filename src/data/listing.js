@@ -110,7 +110,7 @@ export const reviews = [
 ];
 
 export const reviewChips = [
-  ['🛋️', 'Comfort', '6'], ['✅', 'Accuracy', '5'], ['🛁', 'Hot tub', '5'], ['🧺', 'Condition', '4'], ['🎁', 'Hospitality', '8'], ['🧼', 'Cleanliness', '4'], ['🛏️', 'Amenities', '2'], ['🗺️', 'Location', '3']
+  ['sofa', 'Comfort', '6'], ['accuracy', 'Accuracy', '5'], ['hot-tub', 'Hot tub', '5'], ['cleaning', 'Condition', '4'], ['gift', 'Hospitality', '8'], ['cleanliness', 'Cleanliness', '4'], ['bed-linen', 'Amenities', '2'], ['map', 'Location', '3']
 ];
 
 export const nearbyPages = [
