@@ -17,7 +17,7 @@ export const listing = {
       '/images/tour-living1-2.jpg',
       '/images/tour-living1-3.jpg',
     ]],
-    ['Living room 2', 'Sofa · Air conditioning · Ceiling fan · TV', [
+    ['Living room 2', 'Ceiling fan · Hot tub', [
       '/images/tour-living2-1.jpg',
       '/images/tour-living2-2.jpg',
       '/images/tour-living2-3.jpg',
@@ -26,39 +26,39 @@ export const listing = {
       '/images/tour-living2-6.jpg',
       '/images/tour-living2-7.jpg',
     ]],
-    ['Full kitchen', 'Kitchen · Dining area · Cookware', [
+    ['Full kitchen', 'Freezer · Fridge · Blender · Cooker · Cooking basics · Kettle · Microwave · Toaster · Wine glasses · Coffee · Crockery and cutlery', [
       '/images/tour-kitchen-1.png',
       '/images/tour-kitchen-2.png',
       '/images/tour-kitchen-3.png',
     ]],
-    ['Bedroom', '1 double bed · Air conditioning', [
+    ['Bedroom', 'Double bed · Air conditioning · Bed linen · Ceiling fan · Clothes storage · Cot · Hangers · Iron · Room-darkening blinds · Cleaning available during stay · CLeaning products · Long-term stays allowed · Private entrance · Wifi', [
       '/images/tour-bedroom-1.png',
       '/images/tour-bedroom-2.png',
       '/images/tour-bedroom-3.png',
       '/images/tour-bedroom-1.png',
       '/images/tour-bedroom-2.png',
     ]],
-    ['Full bathroom', 'Hot water · Towels', ['/images/tour-bathroom-1.png']],
-    ['Gym', 'Fitness room · Equipment', [
+    ['Full bathroom', 'Hairdryer · Hot water · Shampoo · Shower gel', ['/images/tour-bathroom-1.png']],
+    ['Gym', 'Air conditioning · Gym · Exercise equipment · Ceiling fan', [
       '/images/tour-gym-1.png',
       '/images/tour-gym-2.png',
       '/images/tour-gym-3.png',
       '/images/tour-gym-4.png',
       '/images/tour-gym-5.png',
     ]],
-    ['Exterior', 'Building · Quiet neighbourhood', [
+    ['Exterior', '', [
       '/images/tour-exterior-1.png',
       '/images/tour-exterior-2.png',
       '/images/tour-exterior-3.png',
       '/images/tour-exterior-1.png',
       '/images/tour-exterior-3.png',
     ]],
-    ['Pool', 'Shared outdoor pool', [
+    ['Pool', 'Pool', [
       '/images/tour-pool-1.png',
       '/images/tour-pool-1.png',
       '/images/tour-pool-2.png',
     ]],
-    ['Additional photos', 'More views', [
+    ['Additional photos', '', [
       '/images/tour-additional-1.png',
       '/images/tour-additional-2.png',
       '/images/tour-additional-3.png',

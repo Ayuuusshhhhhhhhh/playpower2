@@ -3687,3 +3687,64 @@ html, body, button, input, textarea, select {
   width: 16px !important;
   height: 16px !important;
 }
+/* Photo Tour - room layout */
+
+.photo-tour .room-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 80px;
+  align-items: start;
+  padding-bottom: 80px;
+}
+
+.photo-tour .room-description {
+  position: sticky;
+  top: 110px;
+  align-self: start;
+}
+
+.photo-tour .room-description h1 {
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 0 6px;
+}
+
+.photo-tour .room-description p {
+  font-size: 13px;
+  line-height: 18px;
+  color: #717171;
+  margin: 0;
+}
+
+.photo-tour .room-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  align-content: start;
+}
+
+.photo-tour .room-gallery.single {
+  display: block;
+}
+
+.photo-tour .room-photo {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.photo-tour .room-gallery .room-photo.primary {
+  grid-column: 1 / -1;
+  height: 308px;
+}
+
+.photo-tour .room-gallery .room-photo.secondary {
+  height: 160px;
+}
+
+.photo-tour .room-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

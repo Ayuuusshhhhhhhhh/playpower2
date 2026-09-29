@@ -54,7 +54,7 @@ export function HostSection() {
                 ) : (
                   <span>{initial}</span>
                 )}
-                <b>{name}</b>
+                {name}
               </div>
             ))}
           </div>

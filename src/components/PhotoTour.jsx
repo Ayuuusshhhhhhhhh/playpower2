@@ -14,6 +14,7 @@ export function PhotoTour({ rooms, onBack, onOpen, onSave, saved }) {
           <button type="button" aria-label="Share">
             <Icon name="share" />
           </button>
+
           <button
             type="button"
             aria-label="Save"
@@ -26,9 +27,12 @@ export function PhotoTour({ rooms, onBack, onOpen, onSave, saved }) {
       </div>
 
       <div className="tour-inner">
+
+        {/* Room thumbnails */}
         <div className="room-tabs">
           {rooms.map(([name, subtitle, images], index) => {
             const gallery = Array.isArray(images) ? images : [images];
+
             return (
               <button
                 key={name}
@@ -36,7 +40,10 @@ export function PhotoTour({ rooms, onBack, onOpen, onSave, saved }) {
                 onClick={() =>
                   document
                     .getElementById(`room-${index}`)
-                    ?.scrollIntoView({ behavior: 'smooth' })
+                    ?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                    })
                 }
               >
                 <img src={gallery[0]} alt="" />
@@ -46,19 +53,24 @@ export function PhotoTour({ rooms, onBack, onOpen, onSave, saved }) {
           })}
         </div>
 
+        {/* Individual room sections */}
         {rooms.map(([name, subtitle, images], index) => {
           const gallery = Array.isArray(images) ? images : [images];
+
           return (
             <section
               className="room-section"
               id={`room-${index}`}
               key={name}
             >
-              <div>
+
+              {/* Left: sticky room description */}
+              <div className="room-description">
                 <h1>{name}</h1>
                 <p>{subtitle}</p>
               </div>
 
+              {/* Right: photos for this room */}
               <div
                 className={
                   gallery.length > 1
@@ -78,15 +90,19 @@ export function PhotoTour({ rooms, onBack, onOpen, onSave, saved }) {
                     onClick={() => onOpen(image)}
                     aria-label={`Open ${name}, photo ${imageIndex + 1}`}
                   >
-                    <img src={image} alt={`${name} ${imageIndex + 1}`} />
+                    <img
+                      src={image}
+                      alt={`${name} ${imageIndex + 1}`}
+                    />
                   </button>
                 ))}
               </div>
+
             </section>
           );
         })}
-      </div>
 
+      </div>
     </div>
   );
 }
