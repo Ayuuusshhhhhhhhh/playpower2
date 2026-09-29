@@ -502,3 +502,17 @@ body {
   border: 1.5px solid var(--neutral-06); border-radius: 6px;
 }
 .calendar-bottom button svg { width: 20px; height: 20px; }
+
+/* --- Photo tour: 976px rail (reference), 8 room tiles per row, 9th wraps --- */
+.photo-tour .tour-inner { width: 976px !important; max-width: calc(100vw - 48px) !important; margin: 0 auto !important; }
+.photo-tour .room-tabs {
+  display: grid !important;
+  grid-template-columns: repeat(8, 112px);
+  justify-content: space-between;
+  row-gap: 24px !important;
+  column-gap: 0 !important;
+}
+.photo-tour .room-tabs button { width: 112px !important; padding: 0 !important; }
+.photo-tour .room-tabs img { width: 112px !important; height: 105px !important; border-radius: 8px !important; }
+.photo-tour .room-tabs span { font-size: 14px; line-height: 18px; }
+.photo-tour .room-section { grid-template-columns: 458px 458px !important; column-gap: 60px !important; }
