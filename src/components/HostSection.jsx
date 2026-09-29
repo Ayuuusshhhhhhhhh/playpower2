@@ -11,8 +11,12 @@ export function HostSection() {
           <div className="host-card">
             <div className="host-card-main">
               <div className="host-logo">
-                <img src="/images/host.jpeg" alt="Mirashya Homes" />
-              </div>
+  <img src="/images/host.jpeg" alt="Mirashya Homes" />
+
+  <span className="verified-badge" aria-label="Verified host">
+    <span className="verified-check"></span>
+  </span>
+</div>
 
               <h3>
                 Mirashya

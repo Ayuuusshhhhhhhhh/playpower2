@@ -140,6 +140,7 @@ u {
   align-items:center;
   gap:7px;
   text-decoration:underline
+  
 }
 .title-actions button.saved {
   color:var(--airbnb);
@@ -3747,4 +3748,55 @@ html, body, button, input, textarea, select {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.host-logo {
+  position: relative;
+  overflow: visible;
+}
+
+.host-logo img {
+  border-radius: 50%;
+}
+
+.verified-badge {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ff385c;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verified-check {
+  width: 11px;
+  height: 6px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+  margin-top: -2px;
+}
+.title-actions button {
+  transition: background 0.15s, transform 0.05s !important;
+}
+
+.title-actions button:hover {
+  background: #ebebeb !important;
+}
+
+.title-actions button:active {
+  transform: scale(0.96) !important;
+}
+.search-pill {
+  transition: box-shadow 0.2s ease;
+}
+
+.search-pill:hover {
+  box-shadow: 0 2px 8px #00000020 !important;
 }
