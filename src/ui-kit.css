@@ -460,7 +460,7 @@ body {
 .things-grid p { font-size: 15px !important; line-height: 21px !important; max-width: none !important; }
 .things-grid { grid-template-columns: repeat(3, 352px) !important; column-gap: 32px !important; }
 .nearby-section { padding-top: 41px !important; }
-.nearby-viewport { margin-top: -7px !important; }
+.nearby-viewport { margin-top: 24px !important; }
 
 .sleep-section { padding-bottom: 25px !important; }
 .date-box .guest-row { display: flex !important; flex-direction: column; justify-content: flex-start !important; align-items: flex-start !important; position: relative; text-align: left; }

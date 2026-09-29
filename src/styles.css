@@ -1669,7 +1669,7 @@ body {
   display: flex;
   gap: 22px;
   width: max-content;
-  transition: transform 0.52s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: transform 1s cubic-bezier(0.22, 0.61, 0.36, 1);
   will-change: transform;
 }
 
