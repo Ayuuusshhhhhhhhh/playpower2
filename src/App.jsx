@@ -197,10 +197,15 @@ function RatingSection() {
 
       <div className="review-chips">
         {reviewChips.map(([icon, label, count]) => (
-          <button type="button" key={label}>
-            <span className="chip-emoji" aria-hidden="true">{icon}</span>
-            <b>{label}</b> <span className="chip-count">{count}</span>
-          </button>
+        <button type="button" key={label}>
+        <img
+        src={icon}
+        alt=""
+        className="review-chip-icon"
+        />
+        <b>{label}</b>
+        <span className="chip-count">{count}</span>
+        </button>
         ))}
       </div>
 

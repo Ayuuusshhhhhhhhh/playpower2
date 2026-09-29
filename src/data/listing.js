@@ -9,7 +9,7 @@ export const listing = {
     '/images/hero-living2.jpg',
     '/images/hero-jacuzzi.jpg',
     '/images/hero-bedroom.jpg',
-    '/images/hero-exterior.jpg',
+    '/images/tour-exterior-3.png',
   ],
   rooms: [
     ['Living room 1', 'Sofa · Air conditioning · Ceiling fan · TV', [
@@ -110,7 +110,7 @@ export const reviews = [
 ];
 
 export const reviewChips = [
-  ['🛋️', 'Comfort', '6'], ['✅', 'Accuracy', '5'], ['🛁', 'Hot tub', '5'], ['🧺', 'Condition', '4'], ['🎁', 'Hospitality', '8'], ['🧼', 'Cleanliness', '4'], ['🛏️', 'Amenities', '2'], ['🖼️', 'Decor', '2'], ['🏠', 'Indoor spaces', '2'], ['🗺️', 'Location', '2']
+  ['/images/review-icons/comfort.png', 'Comfort', '6'], ['/images/review-icons/accuracy.png', 'Accuracy', '5'], ['/images/review-icons/hot-tub.png', 'Hot tub', '5'], ['/images/review-icons/condition.png', 'Condition', '4'], ['/images/review-icons/hospitality2.png', 'Hospitality', '8'], ['/images/review-icons/cleanliness.png', 'Cleanliness', '4'], ['/images/review-icons/amenities.png', 'Amenities', '2'], ['/images/review-icons/decor.png', 'Decor', '2'], ['/images/review-icons/indoor-spaces.png', 'Indoor spaces', '2'], ['/images/review-icons/location.png', 'Location', '2']
 ];
 
 export const nearbyPages = [

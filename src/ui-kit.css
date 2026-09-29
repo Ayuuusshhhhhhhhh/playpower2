@@ -212,6 +212,9 @@ body {
 .bar-row span { font-size: 12px !important; color: var(--shade-02); }
 
 /* Review chips */
+.review-chips {
+  padding-top: 40px !important;
+}
 .review-chips button {
   display: inline-flex !important;
   align-items: center !important;
@@ -225,6 +228,13 @@ body {
 }
 .review-chips button:hover { border-color: var(--shade-02) !important; }
 .review-chips button b { font-weight: 600; }
+.review-chip-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 
 /* Review cards */
 .review-head b { font-size: 16px; font-weight: 600; }
